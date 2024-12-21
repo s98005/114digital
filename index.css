@@ -1,0 +1,735 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none; /* 移除列表點 */
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+header{
+    position: absolute;
+    background-color: rgba(32,32,32,0);
+    width: 100%;
+    height: 80px;
+    z-index: 999;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+}
+
+nav button{
+    background-color: transparent;
+}
+
+nav img {
+    width: auto;
+    height: 80px;
+    position: relative;
+    margin-right: 921px;
+    background-color: transparent;
+}
+
+nav ul {
+    display: flex; 
+    background-color: transparent;
+}
+
+nav li {
+    margin-right: 0px; /* 項目之間的間距 */
+    margin-top: 11px;
+}
+
+nav p {
+    color: var(--light-blue, #96EFFF);
+    text-align: center;
+    text-shadow: 0px 0px 12px #23F6FF;
+    font-family: "Noto Serif TC";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    padding: 5px 15px 5px;
+}
+
+nav img:hover{
+    width: auto;
+    height: auto;
+    transition: transform 0.3s ease; /* 添加過渡效果 */
+}
+
+#social-media-bar {
+    display: none; /* 初始設置為隱藏 */
+    justify-content: right; /* 對齊內容到右側 */
+}
+
+#social-media-bar ul {
+    width: 125px; /* 設置寬度 */
+    height: 270px; /* 設置高度 */
+    border-radius: 0 0 0 15px; /* 圓角 */
+    text-align: center; /* 文字居中對齊 */
+    background: #383D45; /* 背景顏色 */
+    z-index: 998; /* 堆疊順序 */
+}
+
+#social-media-bar img {
+    display: block; /* 讓圖片作為塊級元素 */
+    background: #383D45; /* 背景顏色 */
+    padding-top: 20px; /* 頂部間距 */
+    padding-left: 30px;
+    margin: 0; /* 移除圖片的外邊距 */  
+}
+
+#video-container{
+    width: 100%; /* 自適應寬度 */
+    height: 780px; /* 自適應高度 */
+    display: flex; /* 使用 Flexbox */
+    justify-content: center; /* 水平居中 */
+    background-color: rgba(0, 0, 0, 1);
+    position: relative;
+}
+
+#video-content{
+    position: relative;
+    width: 1440px;
+    height: 780px;
+    display: flex; /* 使用 Flexbox */
+    justify-content: center; /* 水平居中 */
+}
+
+#background-image{
+    position:absolute;
+    top: 0px;
+    width: 1440px;
+    height: 780px;
+}
+
+#background-black{
+    position:absolute;
+    width: 1440px; /* 自適應寬度 */
+    height: 780px; /* 自適應高度 */
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.40);
+    z-index: 1;
+}
+
+#play-button{
+    position: absolute;
+    width: Fixed (150px)px;
+    height: Fixed (150px)px;
+    top: 320px;
+    left: 645px;
+    gap: 0px;
+    opacity: 0px;    
+    z-index: 2;
+}
+
+#scroll-image{
+    position: absolute;
+    width: Fixed (115px)px;
+    height: Fixed (35px)px;
+    top: 628px;
+    left: 663px;
+    z-index: 2;
+}
+
+#point-image{
+    position: absolute;
+    width: Fixed (68px)px;
+    height: Fixed (25px)px;
+    top: 676px;
+    left: 707px;
+    z-index: 2;
+}
+
+#info-container{
+    width: 100%; /* 自適應寬度 */
+    display: grid;
+    justify-content: center; /* 水平居中 */
+    background-color: rgba(0, 0, 0, 1);
+    position: relative;
+}
+
+#info-section-1{
+    position: relative;
+    width: 1440px;
+    height: 700px;
+    display: flex; /* 使用 Flexbox */
+    justify-content: center; /* 水平居中 */
+    background: linear-gradient(202.29deg, #000000 11.21%, #222831 73.55%);
+}
+
+#info-decorative-image{
+    position: absolute;
+    width: Fixed (123px)px;
+    height: Fixed (123px)px;
+    left: 25px;
+    z-index: 2;
+}
+
+#info-details h2{
+    position: absolute;
+    color: #FFF;
+    font-family: "Noto Serif TC";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    width: Fixed (492px)px;
+    height: Fixed (92px)px;
+    top: 133px;
+    left: 170px;
+    z-index: 2;
+}
+
+#info-details p{
+    position: absolute;
+    background: rgba(255, 255, 255, 1);
+    color: #FFF;
+    font-family: Noto Serif TC;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 48px;
+    text-align: left;
+    width: Fixed (550px)px;
+    height: Fixed (240px)px;
+    top: 264px;
+    left: 170px;
+    background-color: transparent;
+    z-index: 2;
+}
+
+#logo-img{
+    position: absolute;
+    width: Fixed (598px)px;
+    height: Fixed (429px)px;
+    top: 135px;
+    left: 755px;
+    z-index: 2;
+}
+
+#info-details a img{
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    top: 555px;
+    left: 620px;
+    background-color: transparent;
+    z-index: 2;
+}
+
+#info-decorative-image2{
+    position: absolute;
+    width: Fixed (96.66px)px;
+    height: Fixed (85px)px;
+    top: 601.05px;
+    left: 112.96px;
+    transform: rotate(9.39deg); /* 旋轉 9.39 度 */
+    z-index: 2;
+}
+
+#light{
+    position: absolute;
+    width: Fixed (280px)px;
+    height: Fixed (280px)px;
+    top: 112px;
+    left: -75px;
+    z-index: 1;
+}
+
+#info-section-2{
+    position: relative;
+    width: 1440px;
+    height: 600px;
+    display: flex; /* 使用 Flexbox */
+    justify-content: center; /* 水平居中 */
+    background: linear-gradient(169.2deg, #222831 33.26%, #434F61 67.62%, #495668 90.87%);
+}
+
+#exhibition-options{
+    z-index: 2;
+}
+
+#Tab-bar{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 90px;
+    height: 600px;
+}
+
+#Rectangle{
+    position: absolute;
+    top: 78px;
+    left: 0px;
+    width: 21px;
+    height: 166px;
+    transition: top 0.3s ease; /* 設置 top 屬性的過渡效果 */
+}
+
+#exhibition-options p{
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Serif TC";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: 3.2px;
+    width: 38.889px;
+    height: 140px;
+}
+
+#exhibition-options button{
+    background-color: transparent;
+    height: 140px;
+    z-index: 2;
+}
+
+#place1{
+    position: absolute;
+    top: 95px;
+    left: 20px;
+}
+
+#place2{
+    position: absolute;
+    top: 377px;
+    left: 20px;
+}
+
+#place-info1{
+    z-index: 2;
+}
+
+#place-info1 h2{
+    position: absolute;
+    color: #FFF;
+    font-family: "Noto Serif TC";
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: Fixed (224px)px;
+    height: Fixed (80px)px;
+    top: 95px;
+    left: 168px;
+    z-index: 2;
+}
+
+#name1{
+    position: absolute;
+    color: #FFF;
+    font-family: "Noto Serif TC";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 80px; /* 250% */
+    width: Fixed (416px)px;
+    height: Fixed (80px)px;
+    top: 217px;
+    left: 168px;
+    z-index: 2;
+}
+
+#date1{
+    position: absolute;
+    width: Fixed (207px)px;
+    height: Fixed (80px)px;
+    top: 320px;
+    left: 168px;
+    color: #FFF;
+    font-family: "Noto Serif TC";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 80px; /* 250% */
+    letter-spacing: 0.64px;
+    z-index: 2;
+}
+
+#location1{
+    position: absolute;
+    color: #FFF;
+    font-family: "Noto Serif TC";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 80px; /* 250% */
+    letter-spacing: 0.64px;
+    width: Fixed (429px)px;
+    height: Fixed (80px)px;
+    top: 400px;
+    left: 168px;
+    z-index: 2;
+}
+
+#map-link1{
+    position: absolute;
+    width: 100pxpx;
+    height: 100px;
+    top: 377px;
+    left: 595px;    
+    z-index: 2;
+}
+
+#map1{
+    position: absolute;
+    width: Fixed (588.96px)px;
+    height: Fixed (320px)px;
+    top: 160px;
+    left: 787px;
+    gap: 0px;
+    border-radius: 10px 0px 0px 0px;
+    opacity: 0px;   
+    transform: scale(0.05); 
+    z-index: 3;
+    transform-origin: top left; 
+}
+
+#place-info2{
+    display: none;
+    z-index: 2;
+}
+
+#place-info2 h2{
+    position: absolute;
+    color: #FFF;
+    font-family: "Noto Serif TC";
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: Fixed (224px)px;
+    height: Fixed (80px)px;
+    top: 95px;
+    left: 168px;
+    z-index: 2;
+}
+
+#name2{
+    position: absolute;
+    color: #FFF;
+    font-family: "Noto Serif TC";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 80px; /* 250% */
+    width: Fixed (416px)px;
+    height: Fixed (80px)px;
+    top: 217px;
+    left: 168px;
+    z-index: 2;
+}
+
+#date2{
+    position: absolute;
+    width: Fixed (207px)px;
+    height: Fixed (80px)px;
+    top: 320px;
+    left: 168px;
+    color: #FFF;
+    font-family: "Noto Serif TC";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 80px; /* 250% */
+    letter-spacing: 0.64px;
+    z-index: 2;
+}
+
+#location2{
+    position: absolute;
+    color: #FFF;
+    font-family: "Noto Serif TC";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 80px; /* 250% */
+    letter-spacing: 0.64px;
+    width: Fixed (429px)px;
+    height: Fixed (80px)px;
+    top: 400px;
+    left: 168px;
+    z-index: 2;
+}
+
+#map-link2{
+    position: absolute;
+    width: 100pxpx;
+    height: 100px;
+    top: 377px;
+    left: 595px;    
+    z-index: 2;
+}
+
+#map2{
+    position: absolute;
+    width: Fixed (588.96px)px;
+    height: Fixed (320px)px;
+    top: 160px;
+    left: 787px;
+    gap: 0px;
+    border-radius: 10px 0px 0px 0px;
+    opacity: 0px;    
+}
+
+#light2{
+    position: absolute;
+    top: -227px;
+    left: 159px;
+    z-index: 1;
+}
+
+#info-section-3{
+    position: relative;
+    width: 1440px;
+    height: 670px;
+    display: flex; /* 使用 Flexbox */
+    justify-content: center; /* 水平居中 */
+    background: linear-gradient(160.98deg, #222831 -32.75%, #384250 -24.92%, #495668 -7.61%, #475465 32.29%, #222831 67.66%);
+    overflow: hidden;
+}
+
+#shop h2{
+    position: absolute;
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Serif TC";
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: Fixed (224px)px;
+    height: Fixed (80px)px;
+    top: 35px;
+    left: 135px;
+}
+
+#shop-description1{
+    position: absolute;
+    width: Fixed (111px)px;
+    height: Fixed (111px)px;
+    top: 22px;
+    left: 362px;  
+}
+
+#goods{
+    position: relative;
+    top: 151px;
+    height: 400px;
+    width: 1440px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+#goods ul{
+    display: flex;
+    position: relative;
+    background-color: transparent;
+    height: 400px;
+    margin-left: 108px;
+}
+
+#goods li{
+    margin: 8px 53px 0px;
+    display: block;
+    text-align: center;
+    width: 285px;
+}
+
+#goods h6{
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Serif TC";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 4px;
+}
+
+#goods p{
+    margin-top: -2px;
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Serif TC";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+#shop-description2{
+    position: absolute;
+    width: Fixed (52px)px;
+    height: Fixed (52px)px;
+    top: 346px;
+    left: 270px;
+}
+
+#shop-description3{
+    position: absolute;
+    width: 43.247px;
+    height: 49px;
+    transform: rotate(16.039deg);
+    top: 0px;
+    left: 712px;
+}
+
+#shop-description4{
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0;
+    top: 266px;
+    left: 1079px;
+}
+
+#shop-description5{
+    position: absolute;
+    width: 103px;
+    height: 74px;
+    flex-shrink: 0;
+    top: 0px;
+    left: 1466px;
+}
+
+#shop-description6{
+    position: absolute;
+    width: 89.561px;
+    height: 55px;
+    transform: rotate(-20.968deg);
+    flex-shrink: 0;
+    top:251px;
+    left: 1848px;
+}
+
+#shop-description7{
+    position: absolute;
+    top: 587px;
+    left: 6.38px;
+    width: 90px;
+    height: 90px;
+    transform: rotate(-15deg);
+    flex-shrink: 0;
+    z-index: 2;
+}
+
+#buy{
+    position: absolute;
+    width: Fixed (180px)px;
+    height: Fixed (46px)px;
+    top: 594px;
+    left: 630px;  
+    z-index: 2;
+}
+
+#light3{
+    position: absolute;
+    top: 24px;
+    left: 0px;
+    flex-shrink: 0;
+}
+
+#light4{
+    position: absolute;
+    top:46px;
+    left:722px;
+    width: auto;
+    height: auto;
+    flex-shrink: 0;
+}
+
+footer{
+    width: 100%; /* 自適應寬度 */
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    background-color: rgba(0, 0, 0, 1);
+    position: relative;
+}
+
+#footer-container{
+    position: relative;
+    width: 1440px;
+    height: 300px;
+    display: flex; /* 使用 Flexbox */
+    justify-content: center; /* 水平居中 */
+    background: #2B3646;
+}
+
+#fb{
+    position: absolute;
+    width: Fixed (85px)px;
+    height: Fixed (85px)px;
+    top: 35px;
+    left: 50px;    
+}
+
+#ig{
+    position: absolute;
+    width: Fixed (85px)px;
+    height: Fixed (85px)px;
+    top: 35px;
+    left: 195px;
+}
+
+#yt{
+    position: absolute;
+    width: Fixed (85px)px;
+    height: Fixed (85px)px;
+    top: 35px;
+    left: 340px;    
+}
+
+footer h2{
+    position: absolute;
+    width: Fixed (128px)px;
+    height: Fixed (47px)px;
+    top: 35px;
+    right: 60px;
+    color: #FFF;
+    text-align: right;
+    font-family: "Noto Serif TC";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 56px; /* 200% */
+}
+
+footer p{
+    position: absolute;
+    color: #FFF;
+    text-align: right;
+    font-family: "Noto Serif TC";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 155.556% */
+    width: Fixed (679px)px;
+    height: Fixed (112px)px;
+    top: 87px;
+    right: 60px;    
+}
+
+footer h6{
+    position: absolute;
+    color: rgba(255, 255, 255, 0.30);
+    text-align: center;
+    font-family: "Noto Serif TC";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 56px; /* 233.333% */
+    width: Fixed (376px)px;
+    height: Fixed (56px)px;
+    top: 239px;
+    justify-content: center;
+}
