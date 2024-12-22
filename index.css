@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none; /* 移除底線 */
+}
+
 button {
     cursor: pointer;
 }
@@ -19,13 +23,23 @@ header{
 }
 
 nav {
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
-    padding: 0 20px;
+    z-index: 999;
+}
+
+#nav{
+    position: relative;
+    width: 1440px;
+    height: 80px;
+    flex-shrink: 0;
 }
 
 nav button{
+    position: absolute;
+    left: 0px;
     background-color: transparent;
 }
 
@@ -37,14 +51,18 @@ nav img {
     background-color: transparent;
 }
 
-nav ul {
-    display: flex; 
-    background-color: transparent;
+#project-chose-button{
+    top: 16px;
+    left: 1184px;
+    gap: 0px;
+    opacity: 0px;
+    position: absolute;
 }
 
-nav li {
-    margin-right: 0px; /* 項目之間的間距 */
-    margin-top: 11px;
+#group{
+    top: 16px;
+    left: 1340px;
+    position: absolute;
 }
 
 nav p {
@@ -56,13 +74,117 @@ nav p {
     font-style: normal;
     font-weight: 900;
     line-height: normal;
-    padding: 5px 15px 5px;
 }
 
 nav img:hover{
     width: auto;
     height: auto;
     transition: transform 0.3s ease; /* 添加過渡效果 */
+}
+
+#Project-page{
+    top: 0px;
+    position: absolute;
+    width: 100%;
+    height: 1024px;
+    display: flex; /* 使用 Flexbox */
+    justify-content: center; 
+    z-index: 3;
+}
+
+#Project-page1{
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    flex-shrink: 0;
+}
+
+#Project-page-img{
+    width: Fixed (195px)px;
+    height: Fixed (80px)px;
+    left: 1127px;
+    gap: 0px;
+    opacity: 0px;
+    position: absolute;    
+}
+
+#project-chose{
+    position: absolute;
+    width:1440px;
+    height: 800px;
+    top: 80px;
+    gap: 0px;
+    opacity: 0px;
+    background: rgba(34, 40, 49, 0.85);
+}
+
+#h2-1{
+    color: var(--light-blue, #96EFFF);
+    text-align: center;
+    font-family: "Noto Serif TC";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    top: 28px;
+    left: 148px;
+    gap: 0px;
+    opacity: 0px;
+    position: absolute;
+}
+
+#line1{
+    width: Fixed (5px)px;
+    height: Fixed (102px)px;
+    top: 88px;
+    left: 189px;
+    gap: 0px;
+    opacity: 0px;
+    position: absolute;
+}
+
+#project-chose button{
+    background-color: rgba(32,32,32,0);
+}
+
+#project-chose p{
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Serif TC";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background-color: rgba(32,32,32,0);
+}
+
+#project-chose a{
+    background-color: rgba(32,32,32,0);
+    text-decoration: none; /* 移除底線 */
+}
+
+#history{
+    top:133px;
+    left: 188px;
+    position: absolute;
+}
+
+#young{
+    top: 276px;
+    left: 168px;
+    position: absolute;
+}
+
+#tower{
+    top:419px;
+    left: 148px;
+    position: absolute;
+}
+
+#school{
+    top: 562px;
+    left: 108px;
+    position: absolute;
 }
 
 #social-media-bar {
