@@ -10,6 +10,9 @@ const img1=document.getElementById("project1");
 const img2=document.getElementById("project2");
 const img3=document.getElementById("project3");
 const img4=document.getElementById("project4");
+const project = document.getElementById('Project-page');
+const projectC = document.getElementById('project-chose-button');
+const close = document.getElementById('close');
 
 var num = 1;
 
@@ -213,4 +216,16 @@ right.addEventListener('click', () => {
         img4.style.display = 'flex';
         img1.style.display = 'none';
     }
+});
+
+projectC.addEventListener('click', () => {
+    if (project.style.display === 'none' || project.style.display === '') {
+        project.style.display = 'flex'; // 顯示 #bar
+    } else {
+        project.style.display = 'none'; // 隱藏 #bar
+    }
+});
+
+close.addEventListener('click', () => {
+    project.style.display = 'none'; // 顯示 #bar
 });

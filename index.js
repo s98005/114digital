@@ -7,6 +7,9 @@ const place2p = place2.querySelector('p');
 const placeinfo1 = document.getElementById('place-info1');
 const placeinfo2 = document.getElementById('place-info2');
 const Rectangle = document.getElementById('Rectangle');
+const project = document.getElementById('Project-page');
+const projectC = document.getElementById('project-chose-button');
+const close = document.getElementById('close');
 
 var place = 1 ;
 
@@ -54,4 +57,16 @@ place2.addEventListener('click', () => {
     placeinfo1.style.display = 'none'; // 隱藏 #bar
     Rectangle.style.top = '360px';
     place = 2;
+});
+
+projectC.addEventListener('click', () => {
+    if (project.style.display === 'none' || project.style.display === '') {
+        project.style.display = 'flex'; // 顯示 #bar
+    } else {
+        project.style.display = 'none'; // 隱藏 #bar
+    }
+});
+
+close.addEventListener('click', () => {
+    project.style.display = 'none'; // 顯示 #bar
 });
