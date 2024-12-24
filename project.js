@@ -16,6 +16,7 @@ const close = document.getElementById('close');
 
 var num = 1;
 
+
 Group.addEventListener('click', () => {
     if (bar.style.display === 'none' || bar.style.display === '') {
         bar.style.display = 'flex'; // 顯示 #bar
@@ -23,6 +24,60 @@ Group.addEventListener('click', () => {
         bar.style.display = 'none'; // 隱藏 #bar
     }
 });
+
+const project21 = document.querySelector('.project-2-1');
+
+// 取得該卡片內的左右按鈕
+const leftBtn = project21.querySelector('.button-left-1');
+const rightBtn = project21.querySelector('.button-right-1');
+
+// 取得該卡片內三個段落
+const text1 = project21.querySelector('.info-p');
+const text2 = project21.querySelector('.info-p-1');
+const text3 = project21.querySelector('.info-p-2');
+
+// 用於記錄當前顯示的段落
+let num1 = 1;
+
+// 預設顯示第一段
+text1.style.display = 'block';
+text2.style.display = 'none';
+text3.style.display = 'none';
+
+// 左按鈕
+leftBtn.addEventListener('click', () => {
+  num1--;
+  if (num1 < 1) {
+    num1 = 3;
+  }
+  updateDisplay(num1);
+});
+
+// 右按鈕
+rightBtn.addEventListener('click', () => {
+  num1++;
+  if (num1 > 3) {
+    num1 = 1;
+  }
+  updateDisplay(num1);
+});
+
+// 根據 num 切換段落顯示
+function updateDisplay(n) {
+  // 先全部隱藏
+  text1.style.display = 'none';
+  text2.style.display = 'none';
+  text3.style.display = 'none';
+  // 再顯示對應段落
+  if(n === 1) {
+    text1.style.display = 'block';
+  } else if(n === 2) {
+    text2.style.display = 'block';
+  } else if(n === 3) {
+    text3.style.display = 'block';
+  }
+}
+
 
 left.addEventListener('click', () => {
     num=num-1;

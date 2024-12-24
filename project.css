@@ -600,7 +600,15 @@ nav img:hover{
     background: linear-gradient(191.98deg, #222831 41.18%, #495668 81.99%);
 }
 
-.button-left{
+.project-2-1{
+    position: relative;
+    width: 1440px;
+    height: 750px;
+    flex-shrink: 0;
+    background: linear-gradient(191.98deg, #222831 41.18%, #495668 81.99%);
+}
+
+.button-left-1{
     width: Fixed (47px)px;
     height: Fixed (90px)px;
     top: 330px;
@@ -613,7 +621,7 @@ nav img:hover{
     z-index: 3;
 }
 
-.button-right{
+.button-right-1{
     width: Fixed (47px)px;
     height: Fixed (90px)px;
     top: 330px;
@@ -638,17 +646,32 @@ nav img:hover{
 }
 
 .info-p{
-    width: (668px)px;
-    height: Fixed (266px)px;
-    top: 241px;
-    left: 618px;
+    display: flex;
+    position: relative;
+}
+
+.info-p-1{
+    display: flex;
+    position: relative;
+    display: none;
+}
+
+.info-img-1{
+    width: 712px;
+    height: 506px;
+    top: 104px;
+    left: 384px;
     gap: 0px;
     opacity: 0px;    
     position: absolute;
-    z-index: 3;
 }
 
 .info-p h2{
+    width: Fixed (320px)px;
+    height: Fixed (92px)px;
+    top: 240px;
+    left: 600px;
+    position: absolute;
     font-family: Noto Serif TC;
     font-size: 56px;
     font-weight: 700;
@@ -664,15 +687,17 @@ nav img:hover{
 }
 
 .info-p p{
-    font-family: Noto Serif TC;
-    font-size: 36px;
-    font-weight: 600;
-    line-height: 51.73px;
-    text-align: left;
-    width: 600;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;    
-    top: 104px;
+    width: Fixed (663px)px;
+    height: Fixed (115px)px;
+    left: 600px;
+    position: absolute;
+    color: #FFF;
+    font-family: "Noto Serif TC";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    top: 348px;
     color: white;   
 }
 
@@ -901,3 +926,25 @@ footer p{
 #Project-page{
     display: none;
 }
+
+#loadingOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: none; /* 預設隱藏 */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  #loadingOverlay.show {
+    display: flex; /* 顯示 Overlay */
+  }
+
+  /* 讓影片充滿 Overlay 區域 */
+  #loadingOverlay video {
+    max-width: 100%;
+    max-height: 100%;
+  }

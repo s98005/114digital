@@ -10,6 +10,8 @@ const Rectangle = document.getElementById('Rectangle');
 const project = document.getElementById('Project-page');
 const projectC = document.getElementById('project-chose-button');
 const close = document.getElementById('close');
+const hamber = document.getElementById('hamber-button');
+const hamber1 = document.getElementById('hamber');
 
 var place = 1 ;
 
@@ -18,6 +20,14 @@ Group.addEventListener('click', () => {
         bar.style.display = 'flex'; // 顯示 #bar
     } else {
         bar.style.display = 'none'; // 隱藏 #bar
+    }
+});
+
+hamber.addEventListener('click', () => {
+    if (hamber1.style.display === 'none' || hamber1.style.display === '') {
+        hamber1.style.display = 'flex'; // 顯示 #bar
+    } else {
+        hamber1.style.display = 'none'; // 隱藏 #bar
     }
 });
 
