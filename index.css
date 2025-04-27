@@ -374,7 +374,7 @@ nav a img:hover{
 #info-container{
     width: 100%; /* 自適應寬度 */
     display: grid;
-    justify-content: center; /* 水平居中 */
+    justify-content: start; /* 水平居中 */
     background: linear-gradient(202.29deg, #000000 11.21%, #222831 73.55%);
     position: relative;
 }
@@ -484,8 +484,8 @@ nav a img:hover{
 #exhibition-options{
     z-index: 2;
     top: 0px;
-    right: 103%;
-    position: absolute;
+    left: 0%;
+    position: relative;
 
 }
 
