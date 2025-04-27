@@ -24,9 +24,11 @@ header{
 
 #nav{
     position: relative;
-    width: 1440px;
+    width: 100%;
     height: 80px;
     flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 nav button{
@@ -39,7 +41,7 @@ nav img {
     width: auto;
     height: 80px;
     position: relative;
-    margin-right: 921px;
+    margin-left: 0px;
     background-color: transparent;
 }
 
@@ -48,17 +50,18 @@ nav img {
 }
 
 #project-chose-button{
+    z-index: 99;
     top: 16px;
-    left: 1184px;
+    margin-right: 120px;
     gap: 0px;
     opacity: 0px;
-    position: absolute;
+    position: relative;
 }
 
 #group{
+    margin-right: 30px;
     top: 16px;
-    left: 1340px;
-    position: absolute;
+    position: relative;
 }
 
 nav p {
@@ -332,7 +335,6 @@ nav a img:hover{
 }
 
 #background-black{
-    position:absolute;
     width: 1440px; /* 自適應寬度 */
     height: 780px; /* 自適應高度 */
     position: absolute;
@@ -373,7 +375,7 @@ nav a img:hover{
     width: 100%; /* 自適應寬度 */
     display: grid;
     justify-content: center; /* 水平居中 */
-    background-color: rgba(0, 0, 0, 1);
+    background: linear-gradient(202.29deg, #000000 11.21%, #222831 73.55%);
     position: relative;
 }
 
@@ -383,7 +385,6 @@ nav a img:hover{
     height: 700px;
     display: flex; /* 使用 Flexbox */
     justify-content: center; /* 水平居中 */
-    background: linear-gradient(202.29deg, #000000 11.21%, #222831 73.55%);
 }
 
 #info-decorative-image{
@@ -466,15 +467,26 @@ nav a img:hover{
 
 #info-section-2{
     position: relative;
+    width: 100%;
+    height: 600px;
+    display: flex; /* 使用 Flexbox */
+    justify-content: centers; /* 水平居中 */
+}
+
+#info-content-2{
+    position: absolute;
     width: 1440px;
     height: 600px;
     display: flex; /* 使用 Flexbox */
     justify-content: center; /* 水平居中 */
-    background: linear-gradient(169.2deg, #222831 33.26%, #434F61 67.62%, #495668 90.87%);
 }
 
 #exhibition-options{
     z-index: 2;
+    top: 0px;
+    right: 103%;
+    position: absolute;
+
 }
 
 #Tab-bar{
@@ -722,6 +734,8 @@ nav a img:hover{
     top: -227px;
     left: 159px;
     z-index: 1;
+    width: Fixed (280px)px;
+    height: Fixed (280px)px;
 }
 
 #info-section-3{
@@ -730,7 +744,6 @@ nav a img:hover{
     height: 670px;
     display: flex; /* 使用 Flexbox */
     justify-content: center; /* 水平居中 */
-    background: linear-gradient(160.98deg, #222831 -32.75%, #384250 -24.92%, #495668 -7.61%, #475465 32.29%, #222831 67.66%);
     overflow: hidden;
 }
 
@@ -883,6 +896,8 @@ nav a img:hover{
     top: 24px;
     left: 0px;
     flex-shrink: 0;
+    width: Fixed (280px)px;
+    height: Fixed (280px)px;
 }
 
 #light4{
@@ -892,13 +907,15 @@ nav a img:hover{
     width: auto;
     height: auto;
     flex-shrink: 0;
+    width: Fixed (280px)px;
+    height: Fixed (280px)px;
 }
 
 footer{
     width: 100%; /* 自適應寬度 */
     display: flex;
     justify-content: center; /* 水平居中 */
-    background-color: rgba(0, 0, 0, 1);
+    background: #2B3646;
     position: relative;
 }
 
@@ -1660,7 +1677,7 @@ footer h6{
         width: 100%; /* 自適應寬度 */
         display: flex;
         justify-content: center; /* 水平居中 */
-        background-color: rgba(0, 0, 0, 1);
+        background-color: rgba(43, 54, 70, 1);
         position: relative;
     }
     
