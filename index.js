@@ -12,6 +12,8 @@ const projectC = document.getElementById('project-chose-button');
 const close = document.getElementById('close');
 const hamber = document.getElementById('hamber-button');
 const hamber1 = document.getElementById('hamber');
+const ProjectChose =  document.getElementById('project-chose-button1');
+
 
 var place = 1 ;
 
