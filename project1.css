@@ -312,7 +312,7 @@ nav img:hover{
     position: relative;
     width: 100%;
     height: 830px;
-    background-color: black;
+    background-color:white;
     display: flex;
     justify-content: center;
 }
@@ -386,7 +386,7 @@ nav img:hover{
 
 #black{
     position: absolute;
-    width: 1440px;
+    width: 100%;
     height: 830px;
     background: rgba(0, 0, 0, 0.85);
     z-index: 2;
@@ -459,7 +459,7 @@ nav img:hover{
     position: relative;
     width: 100%;
     height: 850px;
-    background-color: black;
+    background: linear-gradient(187deg, #000 5.81%, #222831 81.96%);
     display: flex; /* 使用 Flexbox */
     justify-content: center; /* 水平居中 */
 }
@@ -469,7 +469,6 @@ nav img:hover{
     width: 1440px;
     height: 850px;
     flex-shrink: 0;
-    background: linear-gradient(187deg, #000 5.81%, #222831 81.96%);
 }
 
 .logo-img{
@@ -587,7 +586,7 @@ nav img:hover{
     position: relative;
     width: 100%;
     height: 750px;
-    background-color: black;
+    background: linear-gradient(191.98deg, #222831 41.18%, #495668 81.99%);
     display: flex; /* 使用 Flexbox */
     justify-content: center; /* 水平居中 */
 }
@@ -597,7 +596,6 @@ nav img:hover{
     width: 1440px;
     height: 750px;
     flex-shrink: 0;
-    background: linear-gradient(191.98deg, #222831 41.18%, #495668 81.99%);
 }
 
 .project-2-1{
@@ -730,7 +728,7 @@ nav img:hover{
     position: relative;
     width: 100%;
     height: 750px;
-    background-color: black;
+    background: linear-gradient(166deg, #222831 -45.33%, #384250 -30.2%, #495668 -13.64%, #475465 31.44%, #222831 76.14%);
     display: flex; /* 使用 Flexbox */
     justify-content: center; /* 水平居中 */
 }
@@ -740,7 +738,6 @@ nav img:hover{
     width: 1440px;
     height: 750px;
     flex-shrink: 0;
-    background: linear-gradient(166deg, #222831 -45.33%, #384250 -30.2%, #495668 -13.64%, #475465 31.44%, #222831 76.14%);;
 }
 
 .description-4{
