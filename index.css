@@ -310,6 +310,10 @@ nav a img:hover{
     display: none;
 }
 
+#hamber-project{
+    display: none;
+}
+
 #video-container{
     width: 100%; /* 自適應寬度 */
     height: 780px; /* 自適應高度 */
