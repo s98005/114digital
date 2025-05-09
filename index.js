@@ -13,7 +13,8 @@ const close = document.getElementById('close');
 const hamber = document.getElementById('hamber-button');
 const hamber1 = document.getElementById('hamber');
 const ProjectChose =  document.getElementById('project-chose-button1');
-
+const map1 =  document.getElementById('map');
+const map2 =  document.getElementById('map2');
 
 var place = 1 ;
 
@@ -61,6 +62,7 @@ place1.addEventListener('click', () => {
     placeinfo1.style.display = 'flex'; // 顯示 #bar
     placeinfo2.style.display = 'none'; // 隱藏 #bar
     Rectangle.style.top = '78px';
+
     place = 1; 
 });
 

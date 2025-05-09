@@ -1127,6 +1127,42 @@ footer h6{
         margin: 0; /* 移除圖片的外邊距 */ 
     }
 
+    #hamber-project{
+        display: flex; /* 初始設置為隱藏 */
+        position: absolute;
+        width: 100%; /* 對齊內容到右側 */ 
+        z-index: 999;
+    }
+
+    #hamber-project ul{
+        width: 250px;
+        height: 600px;
+        top: -95px;
+        left: 65%;
+        position: absolute;
+        background: rgba(56, 61, 69, 1);
+    }
+
+    #hamber-project button{
+        background-color: rgba(56, 61, 69, 1);
+    }
+    
+    #hamber-project p{
+        color: #FFF;
+        font-family: Noto Serif TC;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;        
+        background-color:  rgba(56, 61, 69, 1);
+    }
+    
+    #hamber-project a{
+        background-color:  rgba(56, 61, 69, 1);
+        text-decoration: none; /* 移除底線 */
+    }
+
     #video-container{
         width: 100%; /* 自適應寬度 */
         height: 310px; /* 自適應高度 */
@@ -1328,11 +1364,12 @@ footer h6{
     
     #map{
         display: flex;
-        width: Fixed (300px)px;
-        height: Fixed (227px)px;
+        width: 300px;
+        height: 227px;
         top: 176px;
         left: 45px;
         position: absolute;
+        border-radius: 20px;
     }
 
     #place-info1{
