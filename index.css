@@ -1128,7 +1128,7 @@ footer h6{
     }
 
     #hamber-project{
-        display: flex; /* 初始設置為隱藏 */
+        display: none; /* 初始設置為隱藏 */
         position: absolute;
         width: 100%; /* 對齊內容到右側 */ 
         z-index: 999;
@@ -1136,9 +1136,10 @@ footer h6{
 
     #hamber-project ul{
         width: 250px;
-        height: 600px;
+        height: 1250px;
         top: -95px;
         left: 65%;
+        justify-content: center;
         position: absolute;
         background: rgba(56, 61, 69, 1);
     }
@@ -1161,6 +1162,117 @@ footer h6{
     #hamber-project a{
         background-color:  rgba(56, 61, 69, 1);
         text-decoration: none; /* 移除底線 */
+    }
+
+    #hamber-project h3{
+        color: var(--light-blue, #96EFFF);
+        text-align: center;
+        font-family: "Noto Serif TC";
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    #back{
+        left: 50%;
+        position: absolute;
+    }
+
+    #h3-1{
+        position: absolute;
+        top:74px;
+        left: 10%;
+    }
+
+    #history-1{
+        position: absolute;
+        top: 142.5px;
+        left: 25%;
+    }
+
+    #young-1{
+        position: absolute;
+        top: 207.5px;
+        left: 25%;
+    }
+
+    #tower-1{
+        top: 272.5px;
+        left: 15%;
+        position: absolute;
+    }
+
+    #school-1{
+        top: 337.5px;
+        left: 0%;
+        position: absolute;
+    }
+
+    #h3-2{
+        top: 393px;
+        left: 10%;
+        position: absolute;
+    }
+
+    #recycle-1{
+        top: 462.5px;
+        left: 15%;
+        position: absolute;
+    }
+
+    #river-1{
+        top: 527.5px;
+        left: 35%;
+        position: absolute;
+    }
+
+    #witch-1{
+        top: 600px;
+        left: 35%;
+        position: absolute;
+    }
+
+    #heart-1{
+        top: 682.5px;
+        left: 20%;
+        position: absolute;
+    }
+
+    #h3-3{
+        top: 756px;
+        left: 10%;
+        position: absolute;
+    }
+
+    #rock-1{
+        top: 842px;
+        left: 15%;
+        position: absolute;
+    }
+
+    #food-1{
+        top: 919px;
+        left: 20%;
+        position: absolute;
+    }
+
+    #Play-1{
+        top: 1019.5px;
+        left: 15%;
+        position: absolute;
+    }
+
+    #mushroom-1{
+        top: 1088px;
+        left: 30%;
+        position: absolute;
+    }
+
+    #music-1{
+        top: 1188px;
+        left: 20%;
+        position: absolute;
     }
 
     #video-container{

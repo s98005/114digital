@@ -15,6 +15,8 @@ const hamber1 = document.getElementById('hamber');
 const ProjectChose =  document.getElementById('project-chose-button1');
 const map1 =  document.getElementById('map');
 const map2 =  document.getElementById('map2');
+const HamberProject =  document.getElementById('hamber-project');
+const back =  document.getElementById('back');
 
 var place = 1 ;
 
@@ -31,6 +33,22 @@ hamber.addEventListener('click', () => {
         hamber1.style.display = 'flex'; // 顯示 #bar
     } else {
         hamber1.style.display = 'none'; // 隱藏 #bar
+    }
+});
+
+ProjectChose.addEventListener('click', () => {
+    if (HamberProject.style.display === 'none' || HamberProject.style.display === '') {
+        HamberProject.style.display = 'flex'; // 顯示 #bar
+    } else {
+       HamberProject.style.display = 'none'; // 隱藏 #bar
+    }
+});
+
+back.addEventListener('click', () => {
+    if (HamberProject.style.display === 'none' || HamberProject.style.display === '') {
+        HamberProject.style.display = 'flex'; // 顯示 #bar
+    } else {
+       HamberProject.style.display = 'none'; // 隱藏 #bar
     }
 });
 
