@@ -18,23 +18,19 @@ header{
     position: absolute;
     background-color: rgba(32,32,32,0);
     width: 100%;
-    height: 80px;
-    z-index: 999;
-}
-
-nav {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    /* height: 80px; */
+    height: 10vh;
     z-index: 999;
 }
 
 #nav{
     position: relative;
-    width: 1440px;
-    height: 80px;
+    width: 100%;
+    /* height: 80px; */
+    height: 10vh;
     flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 nav button{
@@ -47,22 +43,61 @@ nav img {
     width: auto;
     height: 80px;
     position: relative;
-    margin-right: 921px;
+    margin-left: 0px;
     background-color: transparent;
 }
 
+#hmaber-button{
+    display: none;
+}
+/* 增加choose */
+.choose{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 100%;
+    width: 20%;
+}
+/* 移除top、margin，增加cursor、border-radius、transform */
 #project-chose-button{
-    top: 16px;
-    left: 1184px;
+    z-index: 99;
+    /* top: 16px; */
+    /* margin-right: 120px; */
     gap: 0px;
     opacity: 0px;
-    position: absolute;
+    position: relative;
+    cursor: pointer;
+    transform: skew(-22deg);
+    transition: transform 0.3s ease;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-#group{
-    top: 16px;
-    left: 1340px;
+/* add */
+#project-chose-button::after {
+    content: '';
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#project-chose-button.active::after{
+    background: rgba(34, 40, 49, 0.85);
+}
+#group{
+    /* margin-right: 30px; */
+    /* top: 16px; */
+    position: relative;
+    cursor: pointer;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav p {
@@ -70,13 +105,14 @@ nav p {
     text-align: center;
     text-shadow: 0px 0px 12px #23F6FF;
     font-family: "Noto Serif TC";
-    font-size: 28px;
+    font-size: clamp(18px, 2vw, 24px);/* 最小值、中間值、最大值 */
     font-style: normal;
     font-weight: 900;
     line-height: normal;
+    z-index: 100;
 }
 
-nav img:hover{
+nav a img:hover{
     width: auto;
     height: auto;
     transition: transform 0.3s ease; /* 添加過渡效果 */
@@ -91,33 +127,53 @@ nav img:hover{
     justify-content: center; 
     z-index: 3;
 }
-
+/* 修改 */
 #Project-page1{
     position: relative;
-    width: 1440px;
+    /* width: 1440px; */
+    width: 100%;
     height: 1024px;
     flex-shrink: 0;
 }
-
+/* 修改 */
 #Project-page-img{
-    width: Fixed (195px)px;
+    position: absolute;
+    right: 20%;
+    height: 80px;
+    /* width: Fixed (195px)px;
     height: Fixed (80px)px;
     left: 1127px;
     gap: 0px;
     opacity: 0px;
-    position: absolute;    
+    position: absolute;     */
 }
-
+/* 修改 */
 #project-chose{
+    /* 加flex */
+    display: flex;
     position: absolute;
-    width:1440px;
+    /* width:1440px; */
+    left: 5%;
+    width: 90%;
     height: 800px;
-    top: 80px;
+    top: 70px;
     gap: 0px;
     opacity: 0px;
     background: rgba(34, 40, 49, 0.85);
+    /* add */
+    justify-content: space-around;
 }
-
+/* add */
+#project-chose > div{
+    position: relative;
+    top: 20px;
+    display: flex;
+    width: 33%;
+    height: calc(100% - 20px);
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
 #Project-page1 h2{
     color: var(--light-blue, #96EFFF);
     text-align: center;
@@ -128,7 +184,13 @@ nav img:hover{
     line-height: normal;
     gap: 0px;
     opacity: 0px;
-    position: absolute;
+}
+/* add */
+.project-cont{
+    display: flex;
+    width: 100%;
+    height: 80%;
+    justify-content: center;
 }
 
 #h2-1{
@@ -152,20 +214,20 @@ nav img:hover{
     width: Fixed (5px)px;
     height: Fixed (102px)px;
     top: 88px;
-    left: 189px;
+    /* left: 189px; */
     position: absolute;
 }
 
 #line2{
     top: 88px;
-    left: 669px;
+    /* left: 669px; */
     gap: 0px;
     position: absolute;
 }
 
 #line3{
     top: 88px;
-    left: 1149px;
+    /* left: 1149px; */
     position: absolute;
 }
 
@@ -191,31 +253,31 @@ nav img:hover{
 
 #history{
     top:133px;
-    left: 188px;
+    /* left: 188px; */
     position: absolute;
 }
 
 #young{
     top: 276px;
-    left: 168px;
+    /* left: 168px; */
     position: absolute;
 }
 
 #tower{
     top:419px;
-    left: 148px;
+    /* left: 148px; */
     position: absolute;
 }
 
 #school{
     top: 562px;
-    left: 108px;
+    /* left: 108px; */
     position: absolute;
 }
 
 #recycle{
     top: 133px;
-    left: 620px;
+    /* left: 620px; */
     position: absolute;
 }
 
@@ -223,7 +285,7 @@ nav img:hover{
     width: Fixed (210px)px;
     height: Fixed (46px)px;
     top: 276px;
-    left: 665px;
+    /* left: 665px; */
     gap: 0px;
     opacity: 0px;
     position: absolute;    
@@ -233,7 +295,7 @@ nav img:hover{
     width: Fixed (64px)px;
     height: Fixed (48px)px;
     top: 419px;
-    left: 688px;
+    /* left: 688px; */
     gap: 0px;
     opacity: 0px;
     position: absolute;
@@ -241,37 +303,37 @@ nav img:hover{
 
 #heart{
     top: 562px;
-    left: 648px;
+    /* left: 648px; */
     position: absolute;
 }
 
 #rock{
     top:133px;
-    left:1105px;
+    /* left:1105px; */
     position: absolute;
 }
 
 #food{
     top:242px;
-    left:1145px;
+    /* left:1145px; */
     position: absolute;
 }
 
 #Play{
     top:350px;
-    left:1125px;
+    /* left:1125px; */
     position: absolute;
 }
 
 #mushroom{
     top:460px;
-    left:1185px;
+    /* left:1185px; */
     position: absolute;
 }
 
 #music{
     top: 568px;
-    left:1155px;
+    /* left:1155px; */
     position: absolute;
 }
 
@@ -279,12 +341,12 @@ nav img:hover{
     width: Fixed (28px)px;
     height: Fixed (28px)px;
     top: 16px;
-    left: 1397px;
+    right: 15px;
+    /* left: 1397px; */
     gap: 0px;
     opacity: 0px;
     position: absolute;    
 }
-
 
 #social-media-bar {
     display: none; /* 初始設置為隱藏 */
@@ -299,89 +361,96 @@ nav img:hover{
     background: #383D45; /* 背景顏色 */
     z-index: 998; /* 堆疊順序 */
 }
-
+#social-media-bar div{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
 #social-media-bar img {
     display: block; /* 讓圖片作為塊級元素 */
     background: #383D45; /* 背景顏色 */
-    padding-top: 20px; /* 頂部間距 */
-    padding-left: 30px;
+    /* padding-top: 20px; 頂部間距
+    padding-left: 30px; */
     margin: 0; /* 移除圖片的外邊距 */  
+}
+
+#hamber-button{
+    display: none;
+}
+
+#hamber{
+    display: none;
+}
+
+#hamber-project{
+    display: none;
 }
 
 #chose{
     position: relative;
     width: 100%;
-    height: 830px;
+    height: 110vh;
     background-color: white;
     display: flex;
     justify-content: center;
 }
 
 #chose-container{
-    width: 1440px;
-    position: relative;
-    height: 830px;
-    background-color: white;
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    height: 110vh;
+    align-items: center;
 }
 
 #button-left{
     position: absolute;
-    width: Fixed (120px)px;
-    height: Fixed (120px)px;
-    top: 346px;
-    left: 452px;  
+    width: 8vw;
+    top: 46vh;
+    left: 31vw;  
     z-index: 3;  
 }
 
 #button-right{
     position: absolute;
-    width: Fixed (120px)px;
-    height: Fixed (120px)px;
-    top: 346px;
-    left: 872px;
+    width: 8vw;
+    top: 46vh;
+    left: 61vw;
     z-index: 3;
 }
 
 #project1{
     position: absolute;
-    width: 320px;
-    height: 480px;
-    top: 166px;
-    left: 560px;    
+    width: 22vw;
+    top: 22vh;
+    left: 38.5vw;    
     z-index: 3;
-    transform-origin: top left; 
-    transition: top 0.3s ease;
+   transition: width 0.5s ease, height 0.5s ease, top 0.5s ease, left 0.5s ease, z-index 0s;
 }
 
 #project2{
     position: absolute;
-    width: 240px;
-    height: 360px;
-    top:226px;
-    left: 965px;
+    width: 17vw;
+    top: 38.5vh;
+    left: 69vw;
     z-index: 1;
-    transform-origin: top left;
-    transition: top 0.3s ease; 
+    transition: width 0.5s ease, height 0.5s ease, top 0.5s ease, left 0.5s ease, z-index 0s;
 }
 
 #project3{
     position: absolute;
     display: none;
     z-index: 1;
-    transition: top 0.3s ease;
+    transition: width 0.5s ease, height 0.5s ease, top 0.5s ease, left 0.5s ease, z-index 0s;
 }
 
 #project4{
     position: absolute;
-    width: 240px;
-    height: 360px;
-    top:226px;
-    left: 235px;
+    width: 17vw;
+    top: 30vh;
+    left: 13.5vw;
     z-index: 1; 
-    transform-origin: top left; 
-    transition: top 0.3s ease;
+    transition: width 0.5s ease, height 0.5s ease, top 0.5s ease, left 0.5s ease, z-index 0s;
 }
 
 #black{

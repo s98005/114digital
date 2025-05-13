@@ -13,17 +13,31 @@ const img4=document.getElementById("project4");
 const project = document.getElementById('Project-page');
 const projectC = document.getElementById('project-chose-button');
 const close = document.getElementById('close');
+const hamber = document.getElementById('hamber-button');
+const hamber1 = document.getElementById('hamber');
+
+const ProjectChose =  document.getElementById('project-chose-button1');
 
 var num = 1;
 
 
 Group.addEventListener('click', () => {
-    if (bar.style.display === 'none' || bar.style.display === '') {
-        bar.style.display = 'flex'; // 顯示 #bar
-    } else {
-        bar.style.display = 'none'; // 隱藏 #bar
-    }
-});
+        if (bar.style.display === 'none' || bar.style.display === '') {
+            bar.style.display = 'flex'; // 顯示 #bar
+        } else {
+            bar.style.display = 'none'; // 隱藏 #bar
+        }
+        project.style.display = 'none'; // 隱藏 #bar
+        projectC.classList.remove('active');
+    });
+    
+hamber.addEventListener('click', () => {
+        if (hamber1.style.display === 'none' || hamber1.style.display === '') {
+            hamber1.style.display = 'flex'; // 顯示 #bar
+        } else {
+            hamber1.style.display = 'none'; // 隱藏 #bar
+        }
+    });
 
 const project21 = document.querySelector('.project-2-1');
 
@@ -274,13 +288,60 @@ right.addEventListener('click', () => {
 });
 
 projectC.addEventListener('click', () => {
-    if (project.style.display === 'none' || project.style.display === '') {
-        project.style.display = 'flex'; // 顯示 #bar
-    } else {
-        project.style.display = 'none'; // 隱藏 #bar
-    }
-});
+        if (project.style.display === 'none' || project.style.display === '') {
+            project.style.display = 'flex'; // 顯示 #bar
+            bar.style.display = 'none';
+            projectC.classList.add('active');
+        } else {
+            project.style.display = 'none'; // 隱藏 #bar
+            projectC.classList.remove('active');
+        }
+        this.classList.toggle('active');
+    });
 
-close.addEventListener('click', () => {
-    project.style.display = 'none'; // 顯示 #bar
-});
+    close.addEventListener('click', () => {
+        project.style.display = 'none'; // 顯示 #bar
+        projectC.classList.remove('active');
+    });
+
+ProjectChose.addEventListener('click', () => {
+        if (project.style.display === 'none' || project.style.display === '') {
+            project.style.display = 'flex'; // 顯示 #bar
+            bar.style.display = 'none';
+        } else {
+            project.style.display = 'none'; // 隱藏 #bar
+        }
+    })
+
+function updateSkew() {
+        let skewValue = (window.innerWidth / 100) * -1.3; // 根據視窗寬度計算 `skew`
+        projectC.style.transform = `skew(${skewValue}deg)`;
+    }
+
+    // 視窗變動
+
+window.addEventListener('resize', function() {
+        if (window.innerWidth < 768) {
+            bar.style.display = 'none';
+            project.style.display = 'none'; // 隱藏 #bar
+            projectC.classList.remove('active');
+        }
+        else if (window.innerWidth > 768) {
+            hamber1.style.display = 'none';
+        }
+    });
+
+function updateImage() {
+        const buttonImage = document.querySelector("#close img");
+        
+        if (window.innerWidth < 768) {
+            buttonImage.src = "img/hamburger menu button (1).png";
+        } else {
+            buttonImage.src = "img/close 1.png";
+        }
+    }
+
+window.addEventListener("load", updateSkew);
+window.addEventListener("resize", updateSkew);
+window.addEventListener("resize", updateImage);
+window.addEventListener("load", updateImage);

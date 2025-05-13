@@ -13,45 +13,70 @@
         <nav>
             <div id="nav">
                 <a href="index.html"><img src="img/LOGO2.png" alt="logo"></a>
-                <ul>
-                    <li><button id="project-chose-button"><p>Project</p></button></li>
-                    <li><button id="group"><p>社群</p></button></li>
-                </ul>
+                <div class="choose"><!-- 增加class -->
+                    <div id="project-chose-button"><p>Project</p></div>
+                    <div id="group"><p>社群</p></div><!-- 修改div -->
+                </div>
+                <button id="hamber-button"><img src="img/hamburger menu button.png" alt=""></button>
             </div>
         </nav>
         <div id="social-media-bar">
             <ul>
-                <li><a href="https://www.facebook.com/NCYU.DEDM.GraduationExhibition?locale=zh_TW"><img src="img/fb.png" alt="Facebook"></a></li>
-                <li><a href="instagram.com/dedm_expo"><img src="img/ig.png" alt="Instagram"></a></li>
-                <li><a href="https://www.youtube.com/@%E4%BD%8E%E8%91%97%E9%A0%ADDIGITAL"><img src="img/yt.png" alt="YouTube"></a></li>
+                <div>
+                    <li><a href="https://www.facebook.com/NCYU.DEDM.GraduationExhibition?locale=zh_TW"><img src="img/fb.png" alt="Facebook"></a></li>
+                    <li><a href="instagram.com/dedm_expo"><img src="img/ig.png" alt="Instagram"></a></li>
+                    <li><a href="https://www.youtube.com/@%E4%BD%8E%E8%91%97%E9%A0%ADDIGITAL"><img src="img/yt.png" alt="YouTube"></a></li>
+                </div>
             </ul>
         </div>
         <div id="Project-page">
             <div id="Project-page1">
-                <img id="Project-page-img" src="img/button BG (1).png" alt="">
+                <!-- <img id="Project-page-img" src="img/button BG (1).png" alt=""> -->
                 <div id="project-chose">
-                    <h2 id="h2-1">漫遊海海知識</h2>
-                    <img id="line1" src="img/Rectangle 21.png" alt="">
-                    <button id="history"><a href="project.html"><p>寶島征程</p></a></button>
-                    <button id="young"><a href="project.html"><p>YoungBlood<br>長青體數能</p></a></button>
-                    <button id="tower"><a href="project.html"><p>遺忘之城的秘密</p></a></button>
-                    <button id="school"><a href="project.html"><p>校園迷蹤Campus Quest</p></a></button>
-                    <h2 id="h2-2">超現實探索指南</h2>
-                    <img id="line2" src="img/Rectangle 21.png" alt="">
-                    <button id="recycle"><a href="project1.html"><p>NoAh's CHAOS</p></a></button>
-                    <button id="river"><a href="project1.html"><p>貓愁溪</p></a></button>
-                    <button id="witch"><a href="project1.html"><p>劍巫</p></a></button>
-                    <button id="heart"><a href="project1.html"><p>Crossroads</p></a></button>
-                    <h2 id="h2-3">指尖 Z Power</h2>
-                    <img id="line3" src="img/Rectangle 21.png" alt="">
-                    <button id="rock"><a href="project2.html"><p>永恆之石的傳奇S</p></a></button>
-                    <button id="food"><a href="project2.html"><p>菜鳥食驗嘉</p></a></button>
-                    <button id="Play"><a href="project2.html"><p>老闆，嘉義碗</p></a></button>
-                    <button id="mushroom"><a href="project2.html"><p>菇義</p></a></button>
-                    <button id="music"><a href="project2.html"><p>潮言搖擺</p></a></button>
+                    <div>
+                        <h2 id="h2-1">漫遊海海知識</h2>
+                        <img id="line1" src="img/Rectangle 21.png" alt="">
+                        <div class="project-cont">
+                            <button id="history"><a href="project.html"><p>寶島征途</p></a></button>
+                            <button id="young"><a href="project.html"><p>YoungBlood<br>長青體數能</p></a></button>
+                            <button id="tower"><a href="project.html"><p>遺忘之城的秘密</p></a></button>
+                            <button id="school"><a href="project.html"><p>校園迷蹤Campus Quest</p></a></button>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 id="h2-2">超現實探索指南</h2>
+                        <img id="line2" src="img/Rectangle 21.png" alt="">
+                        <div class="project-cont">
+                            <button id="recycle"><a href="project1.html"><p>NoAh's CHAOS</p></a></button>
+                            <button id="river"><a href="project1.html"><p>貓愁溪</p></a></button>
+                            <button id="witch"><a href="project1.html"><p>劍巫</p></a></button>
+                            <button id="heart"><a href="project1.html"><p>Crossroads</p></a></button>
+                        </div>                        
+                    </div>                    
+                    <div>
+                        <h2 id="h2-3">指尖 Z Power</h2>
+                        <img id="line3" src="img/Rectangle 21.png" alt="">
+                        <div class="project-cont">
+                            <button id="rock"><a href="project2.html"><p>永恆之石的傳奇</p></a></button>
+                            <button id="food"><a href="project2.html"><p>菜鳥食驗嘉</p></a></button>
+                            <button id="Play"><a href="project2.html"><p>老闆，嘉義碗</p></a></button>
+                            <button id="mushroom"><a href="project2.html"><p>菇義</p></a></button>
+                            <button id="music"><a href="project2.html"><p>潮言搖擺</p></a></button>
+                        </div>                        
+                    </div>
                     <button id="close"><img src="img/close 1.png" alt=""></button>
                 </div>
             </div>
+        </div>
+        <div id="hamber">
+            <ul>
+                <button id="project-chose-button1"><p>Project</p></button>
+                <div id="hamber-social">
+                    <li><a href="https://www.facebook.com/NCYU.DEDM.GraduationExhibition?locale=zh_TW"><img src="img/fb.png" alt="Facebook"></a></li>
+                    <li><a href="instagram.com/dedm_expo"><img src="img/ig.png" alt="Instagram"></a></li>
+                    <li><a href="https://www.youtube.com/@%E4%BD%8E%E8%91%97%E9%A0%ADDIGITAL"><img src="img/yt.png" alt="YouTube"></a></li>
+                </div>
+            </ul>    
         </div>
     </header>
 
