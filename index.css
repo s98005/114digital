@@ -18,14 +18,16 @@ header{
     position: absolute;
     background-color: rgba(32,32,32,0);
     width: 100%;
-    height: 80px;
+    /* height: 80px; */
+    height: 10vh;
     z-index: 999;
 }
 
 #nav{
     position: relative;
     width: 100%;
-    height: 80px;
+    /* height: 80px; */
+    height: 10vh;
     flex-shrink: 0;
     display: flex;
     justify-content: space-between;
@@ -48,20 +50,54 @@ nav img {
 #hmaber-button{
     display: none;
 }
-
+/* 增加choose */
+.choose{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 100%;
+    width: 20%;
+}
+/* 移除top、margin，增加cursor、border-radius、transform */
 #project-chose-button{
     z-index: 99;
-    top: 16px;
-    margin-right: 120px;
+    /* top: 16px; */
+    /* margin-right: 120px; */
     gap: 0px;
     opacity: 0px;
     position: relative;
+    cursor: pointer;
+    transform: skew(-22deg);
+    transition: transform 0.3s ease;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
+/* add */
+#project-chose-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#project-chose-button.active::after{
+    background: rgba(34, 40, 49, 0.85);
+}
 #group{
-    margin-right: 30px;
-    top: 16px;
+    /* margin-right: 30px; */
+    /* top: 16px; */
     position: relative;
+    cursor: pointer;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav p {
@@ -69,10 +105,11 @@ nav p {
     text-align: center;
     text-shadow: 0px 0px 12px #23F6FF;
     font-family: "Noto Serif TC";
-    font-size: 28px;
+    font-size: clamp(18px, 2vw, 24px);/* 最小值、中間值、最大值 */
     font-style: normal;
     font-weight: 900;
     line-height: normal;
+    z-index: 100;
 }
 
 nav a img:hover{
@@ -90,33 +127,53 @@ nav a img:hover{
     justify-content: center; 
     z-index: 3;
 }
-
+/* 修改 */
 #Project-page1{
     position: relative;
-    width: 1440px;
+    /* width: 1440px; */
+    width: 100%;
     height: 1024px;
     flex-shrink: 0;
 }
-
+/* 修改 */
 #Project-page-img{
-    width: Fixed (195px)px;
+    position: absolute;
+    right: 20%;
+    height: 80px;
+    /* width: Fixed (195px)px;
     height: Fixed (80px)px;
     left: 1127px;
     gap: 0px;
     opacity: 0px;
-    position: absolute;    
+    position: absolute;     */
 }
-
+/* 修改 */
 #project-chose{
+    /* 加flex */
+    display: flex;
     position: absolute;
-    width:1440px;
+    /* width:1440px; */
+    left: 5%;
+    width: 90%;
     height: 800px;
-    top: 80px;
+    top: 70px;
     gap: 0px;
     opacity: 0px;
     background: rgba(34, 40, 49, 0.85);
+    /* add */
+    justify-content: space-around;
 }
-
+/* add */
+#project-chose > div{
+    position: relative;
+    top: 20px;
+    display: flex;
+    width: 33%;
+    height: calc(100% - 20px);
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
 #Project-page1 h2{
     color: var(--light-blue, #96EFFF);
     text-align: center;
@@ -127,7 +184,13 @@ nav a img:hover{
     line-height: normal;
     gap: 0px;
     opacity: 0px;
-    position: absolute;
+}
+/* add */
+.project-cont{
+    display: flex;
+    width: 100%;
+    height: 80%;
+    justify-content: center;
 }
 
 #h2-1{
@@ -151,20 +214,20 @@ nav a img:hover{
     width: Fixed (5px)px;
     height: Fixed (102px)px;
     top: 88px;
-    left: 189px;
+    /* left: 189px; */
     position: absolute;
 }
 
 #line2{
     top: 88px;
-    left: 669px;
+    /* left: 669px; */
     gap: 0px;
     position: absolute;
 }
 
 #line3{
     top: 88px;
-    left: 1149px;
+    /* left: 1149px; */
     position: absolute;
 }
 
@@ -190,31 +253,31 @@ nav a img:hover{
 
 #history{
     top:133px;
-    left: 188px;
+    /* left: 188px; */
     position: absolute;
 }
 
 #young{
     top: 276px;
-    left: 168px;
+    /* left: 168px; */
     position: absolute;
 }
 
 #tower{
     top:419px;
-    left: 148px;
+    /* left: 148px; */
     position: absolute;
 }
 
 #school{
     top: 562px;
-    left: 108px;
+    /* left: 108px; */
     position: absolute;
 }
 
 #recycle{
     top: 133px;
-    left: 620px;
+    /* left: 620px; */
     position: absolute;
 }
 
@@ -222,7 +285,7 @@ nav a img:hover{
     width: Fixed (210px)px;
     height: Fixed (46px)px;
     top: 276px;
-    left: 665px;
+    /* left: 665px; */
     gap: 0px;
     opacity: 0px;
     position: absolute;    
@@ -232,7 +295,7 @@ nav a img:hover{
     width: Fixed (64px)px;
     height: Fixed (48px)px;
     top: 419px;
-    left: 688px;
+    /* left: 688px; */
     gap: 0px;
     opacity: 0px;
     position: absolute;
@@ -240,37 +303,37 @@ nav a img:hover{
 
 #heart{
     top: 562px;
-    left: 648px;
+    /* left: 648px; */
     position: absolute;
 }
 
 #rock{
     top:133px;
-    left:1105px;
+    /* left:1105px; */
     position: absolute;
 }
 
 #food{
     top:242px;
-    left:1145px;
+    /* left:1145px; */
     position: absolute;
 }
 
 #Play{
     top:350px;
-    left:1125px;
+    /* left:1125px; */
     position: absolute;
 }
 
 #mushroom{
     top:460px;
-    left:1185px;
+    /* left:1185px; */
     position: absolute;
 }
 
 #music{
     top: 568px;
-    left:1155px;
+    /* left:1155px; */
     position: absolute;
 }
 
@@ -278,7 +341,8 @@ nav a img:hover{
     width: Fixed (28px)px;
     height: Fixed (28px)px;
     top: 16px;
-    left: 1397px;
+    right: 15px;
+    /* left: 1397px; */
     gap: 0px;
     opacity: 0px;
     position: absolute;    
@@ -297,12 +361,18 @@ nav a img:hover{
     background: #383D45; /* 背景顏色 */
     z-index: 998; /* 堆疊順序 */
 }
-
+#social-media-bar div{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
 #social-media-bar img {
     display: block; /* 讓圖片作為塊級元素 */
     background: #383D45; /* 背景顏色 */
-    padding-top: 20px; /* 頂部間距 */
-    padding-left: 30px;
+    /* padding-top: 20px; 頂部間距
+    padding-left: 30px; */
     margin: 0; /* 移除圖片的外邊距 */  
 }
 
@@ -315,54 +385,64 @@ nav a img:hover{
 }
 
 #video-container{
-    width: 100%; /* 自適應寬度 */
-    height: 780px; /* 自適應高度 */
+    width: 100%;
+    height: 100vh;
+    /* width: 1440px; 自適應寬度
+    height: 780px; 自適應高度 */
     display: flex; /* 使用 Flexbox */
     justify-content: center; /* 水平居中 */
     background-color: rgba(0, 0, 0, 1);
     position: relative;
 }
-
+/* 修改 */
 #video-content{
     position: relative;
-    width: 1440px;
-    height: 780px;
+    width: 100vw;
+    height: 100vh;
+    /* width: 1440px; 自適應寬度
+    height: 780px; 自適應高度 */
     display: flex; /* 使用 Flexbox */
     justify-content: center; /* 水平居中 */
 }
-
+/* 修改 */
 #background-image{
     position:absolute;
     top: 0px;
-    width: 1440px;
-    height: 780px;
+    width: 100%;
+    height: 100vh;
+    display: block;
 }
-
+/* 修改 */
 #background-black{
-    width: 1440px; /* 自適應寬度 */
-    height: 780px; /* 自適應高度 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* width: 1440px; 自適應寬度
+    height: 780px; 自適應高度 */
     position: absolute;
     background-color: rgba(0, 0, 0, 0.40);
     z-index: 1;
 }
-
+/* 修改left置中 */
 #play-button{
     position: absolute;
     width: Fixed (150px)px;
     height: Fixed (150px)px;
     top: 320px;
-    left: 645px;
+    /* left: 645px; */
+    left: calc(50% - 75px);
     gap: 0px;
     opacity: 0px;    
     z-index: 2;
 }
-
+/* 修改 */
 #scroll-image{
     position: absolute;
     width: Fixed (115px)px;
     height: Fixed (35px)px;
     top: 628px;
-    left: 663px;
+    /* left: 663px; */
+    left: calc(50% - 60px);
     z-index: 2;
 }
 
@@ -371,13 +451,14 @@ nav a img:hover{
     width: Fixed (68px)px;
     height: Fixed (25px)px;
     top: 676px;
-    left: 707px;
+    /* left: 707px; */
+    left: calc(50% - 13.5px);
     z-index: 2;
 }
-
+/* del grid */
 #info-container{
     width: 100%; /* 自適應寬度 */
-    display: grid;
+    /* display: grid; */
     justify-content: start; /* 水平居中 */
     background: linear-gradient(202.29deg, #000000 11.21%, #222831 73.55%);
     position: relative;
@@ -385,8 +466,9 @@ nav a img:hover{
 
 #info-section-1{
     position: relative;
-    width: 1440px;
+    /* width: 1440px; */
     height: 700px;
+    width: 100%;
     display: flex; /* 使用 Flexbox */
     justify-content: center; /* 水平居中 */
 }
@@ -399,11 +481,12 @@ nav a img:hover{
     z-index: 2;
 }
 
-#info-details h2{
+#info-details .title{
     position: absolute;
     color: #FFF;
     font-family: "Noto Serif TC";
-    font-size: 64px;
+    /* font-size: 64px; */
+    font-size: 3.5vw;
     font-style: normal;
     font-weight: 900;
     line-height: normal;
@@ -419,7 +502,8 @@ nav a img:hover{
     background: rgba(255, 255, 255, 1);
     color: #FFF;
     font-family: Noto Serif TC;
-    font-size: 28px;
+    /* font-size: 28px; */
+    font-size: clamp(16px, 2vw, 24px);
     font-weight: 600;
     line-height: 48px;
     text-align: left;
@@ -433,10 +517,11 @@ nav a img:hover{
 
 #logo-img{
     position: absolute;
-    width: Fixed (598px)px;
-    height: Fixed (429px)px;
+    width: 40%;
+    /* width: Fixed (598px)px;
+    height: Fixed (429px)px; */
     top: 135px;
-    left: 755px;
+    right: 50px;
     z-index: 2;
 }
 
@@ -445,7 +530,8 @@ nav a img:hover{
     width: 200px;
     height: 60px;
     top: 555px;
-    left: 620px;
+    /* left: 620px; */
+    left: calc(50% - 100px);
     background-color: transparent;
     z-index: 2;
 }
@@ -459,14 +545,21 @@ nav a img:hover{
     transform: rotate(9.39deg); /* 旋轉 9.39 度 */
     z-index: 2;
 }
-
+/* 修改 */
 #light{
     position: absolute;
-    width: Fixed (280px)px;
-    height: Fixed (280px)px;
-    top: 112px;
-    left: -75px;
+    /* width: Fixed (280px)px;
+    height: Fixed (280px)px; */
+    width: 100%;
+    height: 100%;
+    /* top: 112px; */
+    left: 0;
+    /* left: -75px; */
     z-index: 1;
+}
+#light img{
+    width: 100%;
+    height: 100%;
 }
 
 #info-section-2{
@@ -476,13 +569,14 @@ nav a img:hover{
     display: flex; /* 使用 Flexbox */
 
 }
-
+/* 修改 */
 #info-content-2{
     position: absolute;
-    width: 1440px;
+    /* width: 1440px; */
+    width: 100%;
     height: 600px;
     display: flex; /* 使用 Flexbox */
-    justify-content: center; /* 水平居中 */
+    /* justify-content: center; 水平居中 */
 }
 
 #exhibition-options{
@@ -508,6 +602,10 @@ nav a img:hover{
     width: 21px;
     height: 166px;
     transition: top 0.3s ease; /* 設置 top 屬性的過渡效果 */
+}
+
+#Rectangle-phone{
+    display: none;
 }
 
 #exhibition-options p{
@@ -548,12 +646,13 @@ nav a img:hover{
 #place-info1{
     z-index: 2;
 }
-
-#place-info1 h2{
+/* 修改 */
+.place-title{
     position: absolute;
     color: #FFF;
     font-family: "Noto Serif TC";
-    font-size: 56px;
+    /* font-size: 56px; */
+    font-size: 3.8vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -580,7 +679,8 @@ nav a img:hover{
     position: absolute;
     color: #FFF;
     font-family: "Noto Serif TC";
-    font-size: 32px;
+    /* font-size: 32px; */
+    font-size: 2.3vw;
     font-style: normal;
     font-weight: 600;
     line-height: 80px; /* 250% */
@@ -590,7 +690,7 @@ nav a img:hover{
     left: 168px;
     z-index: 2;
 }
-
+/* 修改 */
 #date1{
     position: absolute;
     width: Fixed (207px)px;
@@ -599,19 +699,21 @@ nav a img:hover{
     left: 168px;
     color: #FFF;
     font-family: "Noto Serif TC";
-    font-size: 32px;
+    /* font-size: 32px; */
+    font-size: 2.3vw;
     font-style: normal;
     font-weight: 600;
     line-height: 80px; /* 250% */
     letter-spacing: 0.64px;
     z-index: 2;
 }
-
+/* 修改 */
 #location1{
     position: absolute;
     color: #FFF;
     font-family: "Noto Serif TC";
-    font-size: 32px;
+    /* font-size: 32px; */
+    font-size: 2.3vw;
     font-style: normal;
     font-weight: 600;
     line-height: 80px; /* 250% */
@@ -622,22 +724,27 @@ nav a img:hover{
     left: 168px;
     z-index: 2;
 }
-
+/* 修改 */
 #map-link1{
     position: absolute;
-    width: 100pxpx;
-    height: 100px;
+    /* width: 100px; */
+    /* height: 100px; */
     top: 377px;
-    left: 595px;    
+    /* left: 595px; */
+    left: calc(45% + 50px);
     z-index: 2;
 }
-
+/* 修改 */
 #map1{
     position: absolute;
-    width: Fixed (588.96px)px;
-    height: Fixed (320px)px;
-    top: 160px;
-    left: 787px;
+    /* width: Fixed (588.96px)px;
+    height: Fixed (320px)px; */
+    width: 700%;
+    height: auto;
+    /* top: 160px; */
+    /* left: 787px; */
+    top: calc(300px / 2);
+    left: 60%;
     gap: 0px;
     border-radius: 10px 0px 0px 0px;
     opacity: 0px;   
@@ -651,7 +758,7 @@ nav a img:hover{
     z-index: 2;
 }
 
-#place-info2 h2{
+/* #place-info2 h2{
     position: absolute;
     color: #FFF;
     font-family: "Noto Serif TC";
@@ -664,13 +771,14 @@ nav a img:hover{
     top: 95px;
     left: 168px;
     z-index: 2;
-}
+} */
 
 #name2{
     position: absolute;
     color: #FFF;
     font-family: "Noto Serif TC";
-    font-size: 32px;
+    /* font-size: 32px; */
+    font-size: 2.3vw;
     font-style: normal;
     font-weight: 600;
     line-height: 80px; /* 250% */
@@ -689,7 +797,8 @@ nav a img:hover{
     left: 168px;
     color: #FFF;
     font-family: "Noto Serif TC";
-    font-size: 32px;
+    /* font-size: 32px; */
+    font-size: 2.3vw;
     font-style: normal;
     font-weight: 600;
     line-height: 80px; /* 250% */
@@ -701,7 +810,8 @@ nav a img:hover{
     position: absolute;
     color: #FFF;
     font-family: "Noto Serif TC";
-    font-size: 32px;
+    /* font-size: 32px; */
+    font-size: 2.3vw;
     font-style: normal;
     font-weight: 600;
     line-height: 80px; /* 250% */
@@ -712,22 +822,27 @@ nav a img:hover{
     left: 168px;
     z-index: 2;
 }
-
+/* 修改 */
 #map-link2{
     position: absolute;
-    width: 100pxpx;
-    height: 100px;
+    /* width: 100pxpx;
+    height: 100px; */
     top: 377px;
-    left: 595px;    
+    /* left: 595px;   */
+    left: calc(45% + 50px);
     z-index: 2;
 }
-
+/* 修改 */
 #map2{
     position: absolute;
-    width: Fixed (588.96px)px;
-    height: Fixed (320px)px;
-    top: 160px;
-    left: 787px;
+    /* width: Fixed (588.96px)px;
+    height: Fixed (320px)px; */
+    width: 35%;
+    height: auto;
+    /* top: 160px;
+    left: 787px; */
+    top: calc(300px / 1.5);
+    left: 60%;
     gap: 0px;
     border-radius: 10px 0px 0px 0px;
     opacity: 0px;    
@@ -735,20 +850,27 @@ nav a img:hover{
 
 #light2{
     position: absolute;
-    top: -227px;
-    left: 159px;
+    width: 100%;
+    height: 100%;
+    /* top: -227px; */
+    /* left: 159px; */
     z-index: 1;
-    width: Fixed (280px)px;
-    height: Fixed (280px)px;
+    /* width: Fixed (280px)px;
+    height: Fixed (280px)px; */
 }
 
 #info-section-3{
     position: relative;
-    width: 1440px;
+    /* width: 1440px; */
+    width: 100%;
     height: 670px;
     display: flex; /* 使用 Flexbox */
     justify-content: center; /* 水平居中 */
     overflow: hidden;
+}
+/* add */
+#shop{
+    width: 100%;
 }
 
 #shop h2{
@@ -773,26 +895,35 @@ nav a img:hover{
     top: 22px;
     left: 362px;  
 }
-
+/* 修改overflow，隱藏滾動條 */
 #goods{
     position: relative;
-    top: 151px;
+    /* top: 151px; */
+    top: 130px;
     height: 450px;
-    width: 1440px;
-    overflow: hidden;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-overflow-style: none;  /* 適用於 IE & Edge */
+    scrollbar-width: none;  /* 適用於 Firefox */
     z-index: 2;
 }
-
+/* 適用於 WebKit (Chrome, Safari) */
+#goods::-webkit-scrollbar {
+    display: none;
+}
+/* 修改 */
 #goods ul{
     display: flex;
     position: relative;
     background-color: transparent;
     height: 450px;
-    margin-left: 108px;
+    left: 80px;
+    min-width: max-content;
 }
 
 #goods li{
-    margin: 8px 53px 0px;
+    margin: 0px 53px;
     display: block;
     text-align: center;
     width: 285px;
@@ -891,7 +1022,8 @@ nav a img:hover{
     width: Fixed (180px)px;
     height: Fixed (46px)px;
     top: 594px;
-    left: 630px;  
+    /* left: 630px;   */
+    left: calc(50% - 90px);
     z-index: 2;
 }
 
@@ -982,7 +1114,7 @@ footer p{
     line-height: 28px; /* 155.556% */
     width: Fixed (679px)px;
     height: Fixed (112px)px;
-    top: 87px;
+    top: 130px;
     right: 60px;    
 }
 
@@ -1072,13 +1204,17 @@ footer h6{
         position: absolute;
         background-color: transparent;
     }
+    
+    .choose{
+        display: none;
+    }
 
     #hamber-button{
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
         top: 0px;
-        left: 84%;
-        position: absolute;
+        right: 10%;
+        position: relative;
         z-index: 999;
         display: block;
     }
@@ -1093,7 +1229,7 @@ footer h6{
         width: 175px;
         height: 600px;
         top: -95px;
-        left: 70%;
+        right: 0;
         position: absolute;
         background: rgba(56, 61, 69, 1);
     }
@@ -1112,167 +1248,26 @@ footer h6{
         left: 41px;
         position: absolute;
     }
-
+    /* 修改位置，移除padding，增加flex */
     #hamber-social{
         top:196px;
         position: absolute;
+        /* add */
+        display: flex;
+        width: 100%;
+        height: calc(100% - 35%);
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
     }
 
     #hamber ul img{
         top: 104px;
         display: block; /* 讓圖片作為塊級元素 */
         background: #383D45; /* 背景顏色 */
-        padding-top: 40px; /* 頂部間距 */
-        padding-left: 57px;
+        /* padding-top: 40px; 頂部間距
+        padding-left: 57px; */
         margin: 0; /* 移除圖片的外邊距 */ 
-    }
-
-    #hamber-project{
-        display: none; /* 初始設置為隱藏 */
-        position: absolute;
-        width: 100%; /* 對齊內容到右側 */ 
-        z-index: 999;
-    }
-
-    #hamber-project ul{
-        width: 250px;
-        height: 1250px;
-        top: -95px;
-        left: 65%;
-        justify-content: center;
-        position: absolute;
-        background: rgba(56, 61, 69, 1);
-    }
-
-    #hamber-project button{
-        background-color: rgba(56, 61, 69, 1);
-    }
-    
-    #hamber-project p{
-        color: #FFF;
-        font-family: Noto Serif TC;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 100%;
-        letter-spacing: 0%;
-        text-align: center;        
-        background-color:  rgba(56, 61, 69, 1);
-    }
-    
-    #hamber-project a{
-        background-color:  rgba(56, 61, 69, 1);
-        text-decoration: none; /* 移除底線 */
-    }
-
-    #hamber-project h3{
-        color: var(--light-blue, #96EFFF);
-        text-align: center;
-        font-family: "Noto Serif TC";
-        font-size: 28px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-    }
-
-    #back{
-        left: 50%;
-        position: absolute;
-    }
-
-    #h3-1{
-        position: absolute;
-        top:74px;
-        left: 10%;
-    }
-
-    #history-1{
-        position: absolute;
-        top: 142.5px;
-        left: 25%;
-    }
-
-    #young-1{
-        position: absolute;
-        top: 207.5px;
-        left: 25%;
-    }
-
-    #tower-1{
-        top: 272.5px;
-        left: 15%;
-        position: absolute;
-    }
-
-    #school-1{
-        top: 337.5px;
-        left: 0%;
-        position: absolute;
-    }
-
-    #h3-2{
-        top: 393px;
-        left: 10%;
-        position: absolute;
-    }
-
-    #recycle-1{
-        top: 462.5px;
-        left: 15%;
-        position: absolute;
-    }
-
-    #river-1{
-        top: 527.5px;
-        left: 35%;
-        position: absolute;
-    }
-
-    #witch-1{
-        top: 600px;
-        left: 35%;
-        position: absolute;
-    }
-
-    #heart-1{
-        top: 682.5px;
-        left: 20%;
-        position: absolute;
-    }
-
-    #h3-3{
-        top: 756px;
-        left: 10%;
-        position: absolute;
-    }
-
-    #rock-1{
-        top: 842px;
-        left: 15%;
-        position: absolute;
-    }
-
-    #food-1{
-        top: 919px;
-        left: 20%;
-        position: absolute;
-    }
-
-    #Play-1{
-        top: 1019.5px;
-        left: 15%;
-        position: absolute;
-    }
-
-    #mushroom-1{
-        top: 1088px;
-        left: 30%;
-        position: absolute;
-    }
-
-    #music-1{
-        top: 1188px;
-        left: 20%;
-        position: absolute;
     }
 
     #video-container{
@@ -1286,8 +1281,9 @@ footer h6{
 
     #video-content{
         position: relative;
-        width: 390px;
-        height: 310px;
+        /* width: 390px; */
+        width: 100%;
+        height: auto;
         display: flex; /* 使用 Flexbox */
         justify-content: center; /* 水平居中 */
     }
@@ -1295,15 +1291,15 @@ footer h6{
     #background-image{
         position:absolute;
         top: 0px;
-        width: 390px;
+        /* width: 390px; */
         height: 310px;
+        width: 100%;
     }
     
     #background-black{
         position:absolute;
-        width: 390px; /* 自適應寬度 */
-        height: 310px; /* 自適應高度 */
-        position: absolute;
+        /* width: 390px; 自適應寬度
+        height: 310px; 自適應高度 */
         background-color: rgba(0, 0, 0, 0.40);
         z-index: 1;
     }
@@ -1320,15 +1316,17 @@ footer h6{
         position: absolute;
         width: 20px;
         height: 54.03px;
-        top: 242px;
-        left: 185px;
+        top: 260px;
+        /* top: 242px; */
+        /* left: 185px; */
         z-index: 2;
     }
     
     #info-container{
+        position: relative;
         width: 100%; /* 自適應寬度 */
-        display: grid;
-        justify-content: center;
+        /* display: grid; */
+        /* justify-content: center; */
         background-color:linear-gradient(183.12deg, #000000 0.98%, #222831 50.74%, #222831 97.41%);
         position: relative;
     }
@@ -1337,13 +1335,59 @@ footer h6{
         position: relative;
         width: 100%;
         height: 930px;
-        display: flex;
-        justify-content: center; /* 水平居中 */
+        /* display: flex;
+        justify-content: center; 水平居中 */
     }
 
     #info-content-1{
-        width: 390px;
+        /* width: 390px; */
+        width: 100%;
         height: 930px;
+    }
+    /* add */
+    #info-details{
+        width: 100%;
+        height: 100%;
+    }
+
+    #info-details ul{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 40%;
+        height: 40%;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    #info-details li{
+        width: 100%;
+    }
+
+    #info-details p{
+        width: 100%;
+    }
+
+    #info-details .title{
+        position: relative;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    #info-details .content{
+        position: relative;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    #info-details p{
+        width: 100%;
+    }
+
+    #info-details .title{
+        font-size: 30px;
     }
 
     #info-decorative-image{
@@ -1355,7 +1399,7 @@ footer h6{
         z-index: 2;
     }
     
-    #info-details h2{
+    /* #info-details ul{
         position: absolute;
         color: #FFF;
         text-align: center;
@@ -1369,7 +1413,7 @@ footer h6{
         top: 379px;
         left: 74px;     
         z-index: 2;
-    }
+    } */
     
     #info-details p{
         position: absolute;
@@ -1393,16 +1437,19 @@ footer h6{
         width: 337px;
         height: 242px;
         top: 88px;
-        left: 27px;      
+        /* left: 27px;   */
+        left: calc(50% - 165px);
         z-index: 2;
     }
     
     #info-details a img{
+        all:unset;
         position: absolute;
         width: 160px;
         height: 45px;
         top: 796px;
-        left: 115px;       
+        /* left: 115px; */
+        left: calc(50% - 80px);
         background-color: transparent;
         z-index: 2;
     }
@@ -1419,12 +1466,16 @@ footer h6{
         position: relative;
         width: 100%;
         height: 844px;
+        display: block;
         display: flex; /* 使用 Flexbox */
+        justify-content: center;
+        flex-direction: column;
     }
     
     #info-content-2{
-        position: absolute;
-        width: 390px;
+        position: relative;
+        width: 100%;
+        /* width: 390px; */
         height: 840px;
         display: flex; /* 使用 Flexbox */
         justify-content: center; /* 水平居中 */
@@ -1432,6 +1483,8 @@ footer h6{
     
     
     #exhibition-options{
+        position: relative;
+        width: 100%;
         z-index: 2;
         writing-mode: horizontal-tb !important;
     }
@@ -1453,42 +1506,133 @@ footer h6{
         line-height: normal;
         letter-spacing: 2.8px;
         white-space: nowrap; /* 禁止換行（可選） */
+        width: fit-content;
+        height: fit-content;
     }
     
     #exhibition-options button{
+        all: unset;/* 重製 */
         background-color: transparent;
-        height: 40px;
-        width: 390px;
         z-index: 2;
     }
     
+    #exhibition-options>div{
+        display: flex;
+        width: 100%;
+        height: fit-content;
+        justify-content: space-evenly;
+    }
+
     #place1{
         position: absolute;
-        top: 8px;
-        left: 52px;
+        /* top: 8px; */
+        /* left: 52px; */
     }
     
     #place2{
         position: absolute;
-        top: 8px;
-        left: 218px;
+        /* top: 8px; */
+        /* left: 218px; */
     }
-    
+    .place-title{
+        all: unset;
+        position: absolute;
+        top: 40px;
+        font-size: 30px;
+        width: fit-content;
+        color: #FFF;
+        font-family: "Noto Serif TC";
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        height: fit-content;
+    }
     #map{
         display: flex;
-        width: 300px;
-        height: 227px;
-        top: 176px;
-        left: 45px;
+        width: 250px;
+        height: auto;
+        /* width: Fixed (300px)px;
+        height: Fixed (227px)px; */
+        /* top: 176px; */
+        /* left: 45px; */
         position: absolute;
+        top: 150px;
         border-radius: 20px;
     }
 
     #place-info1{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
         z-index: 2;
     }
-    
-    #place-info1 h2{
+
+    #Rectangle-phone{
+        position: absolute;
+        display: flex;
+        top: 54px;
+        left: 0px;
+        width: 50%;
+        height: 6px;
+        transition: left 0.5s ease; /* 設置 top 屬性的過渡效果 */
+    }
+
+    #place-info1>div:nth-of-type(1){
+        position: relative;
+        top: 400px;
+        width: 68%;
+        display: flex;
+        height: fit-content;
+        justify-content: space-between;
+    }
+
+    #place-info1>div:nth-of-type(2){
+        position: relative;
+        top: 420px;
+        width: 68%;
+        display: flex;
+        height: fit-content;
+        justify-content: space-between;
+    }
+
+    #place-info1>div:nth-of-type(3){
+        position: relative;
+        top: 440px;
+        width: 68%;
+        display: flex;
+        height: fit-content;
+        justify-content: space-between;
+    }
+
+    #place-info2>div:nth-of-type(1){
+        position: relative;
+        top: 400px;
+        width: 68%;
+        display: flex;
+        height: fit-content;
+        justify-content: space-between;
+    }
+
+    #place-info2>div:nth-of-type(2){
+        position: relative;
+        top: 420px;
+        width: 68%;
+        display: flex;
+        height: fit-content;
+        justify-content: space-between;
+    }
+
+    #place-info2>div:nth-of-type(3){
+        position: relative;
+        top: 440px;
+        width: 68%;
+        display: flex;
+        height: fit-content;
+        justify-content: space-between;
+    }
+    /* #place-info1 h2{
         position: absolute;
         color: #FFF;
         text-align: center;
@@ -1502,49 +1646,54 @@ footer h6{
         top: 95px;
         left: 131px;
         z-index: 2;
-    }
+    } */
 
+    
     #name{
+        all: unset;
         color: #FFF;
         font-family: "Noto Serif TC";
         font-size: 16px;
         font-style: normal;
         font-weight: 600;
         line-height: 40px; /* 250% */
-        top: 422px;
-        left: 57px;
-        position: absolute;  
-        display: flex;      
+        /* top: 422px; */
+        /* left: 57px; */
+        /* position: absolute; */
+        /* display: flex; */
     }
     
     #date{
+        all: unset;
         color: #FFF;
         font-family: "Noto Serif TC";
         font-size: 16px;
         font-style: normal;
         font-weight: 600;
         line-height: 40px; /* 250% */
-        top: 468px;
-        left: 57px;
-        position: absolute;  
-        display: flex;  
+        /* top: 468px; */
+        /* left: 57px; */
+        /* position: absolute;
+        display: flex;   */
     }
     
     #location{
+        all: unset;
         color: #FFF;
         font-family: "Noto Serif TC";
         font-size: 16px;
         font-style: normal;
         font-weight: 600;
         line-height: 40px; /* 250% */
-        top: 514px;
-        left: 57px;
-        position: absolute;  
-        display: flex;  
+        /* top: 514px; */
+        /* left: 57px; */
+        /* position: absolute;  
+        display: flex;   */
     }
     
     #name1{
-        position: absolute;
+        all: unset;
+        /* position: absolute; */
         color: #FFF;
         font-family: "Noto Serif TC";
         font-size: 16px;
@@ -1553,17 +1702,18 @@ footer h6{
         line-height: 40px; /* 250% */
         width: Fixed (208px)px;
         height: Fixed (40px)px;
-        top: 422px;
-        left: 113px;    
+        /* top: 422px; */
+        /* left: 113px; */
         z-index: 2;
     }
     
     #date1{
-        position: absolute;
+        all: unset;
+        /* position: absolute; */
         width: Fixed (184px)px;
         height: Fixed (40px)px;
-        top: 468px;
-        left: 113px;     
+        /* top: 468px; */
+        /* left: 113px; */
         color: #FFF;
         font-family: "Noto Serif TC";
         font-size: 16px;
@@ -1575,7 +1725,8 @@ footer h6{
     }
     
     #location1{
-        position: absolute;
+        all: unset;
+        /* position: absolute; */
         color: #FFF;
         font-family: "Noto Serif TC";
         font-size: 16px;
@@ -1585,8 +1736,8 @@ footer h6{
         letter-spacing: 1.28px;
         width: Fixed (220px)px;
         height: Fixed (40px)px;
-        top: 514px;
-        left: 113px;
+        /* top: 514px; */
+        /* left: 113px; */
         z-index: 2;
     }
     
@@ -1595,18 +1746,24 @@ footer h6{
     }
     
     #map1{
+        all: unset;
         position: absolute;
         width: 300px;
-        height: Fixed (300px)px;
+        /* height: Fixed (300px)px; */
         top: 585px;
-        left: 45px;
-        gap: 0px;
+        /* left: 45px; */
+        /* gap: 0px; */
         opacity: 0px;     
         z-index: 3;
         transform: scale(1); 
     }
     
     #place-info2{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
         z-index: 2;
         display: none;
     }
@@ -1628,7 +1785,8 @@ footer h6{
     }
     
     #name2{
-        position: absolute;
+        all: unset;
+        /* position: absolute; */
         color: #FFF;
         font-family: "Noto Serif TC";
         font-size: 16px;
@@ -1637,17 +1795,18 @@ footer h6{
         line-height: 40px; /* 250% */
         width: Fixed (208px)px;
         height: Fixed (40px)px;
-        top: 422px;
-        left: 113px;    
+        /* top: 422px;
+        left: 113px;     */
         z-index: 2;
     }
     
     #date2{
-        position: absolute;
+        all: unset;
+        /* position: absolute; */
         width: Fixed (184px)px;
         height: Fixed (40px)px;
-        top: 468px;
-        left: 113px;     
+        /* top: 468px;
+        left: 113px;      */
         color: #FFF;
         font-family: "Noto Serif TC";
         font-size: 16px;
@@ -1659,7 +1818,8 @@ footer h6{
     }
     
     #location2{
-        position: absolute;
+        all: unset;
+        /* position: absolute; */
         color: #FFF;
         font-family: "Noto Serif TC";
         font-size: 16px;
@@ -1669,8 +1829,8 @@ footer h6{
         letter-spacing: 1.28px;
         width: Fixed (220px)px;
         height: Fixed (40px)px;
-        top: 514px;
-        left: 113px;
+        /* top: 514px;
+        left: 113px; */
         z-index: 2;
     }
     
@@ -1679,12 +1839,13 @@ footer h6{
     }
     
     #map2{
+        all: unset;
         position: absolute;
         width: 300px;
         height: Fixed (300px)px;
         top: 585px;
-        left: 45px;
-        gap: 0px;
+        /* left: 45px; */
+        /* gap: 0px; */
         opacity: 0px;    
         transform: scale(1);  
         z-index: 3;
@@ -1696,7 +1857,8 @@ footer h6{
     
     #info-section-3{
         position: relative;
-        width: 390px;
+        width: 100%;
+        /* width: 390px; */
         height: 844px;
         display: flex; /* 使用 Flexbox */
         justify-content: center; /* 水平居中 */
@@ -1730,19 +1892,21 @@ footer h6{
     
     #goods{
         position: relative;
-        top: 151px;
+        /* top: 151px; */
+        top: 200px;
         height: 400px;
-        width: 1440px;
-        overflow: hidden;
+        /* width: 1440px; */
         z-index: 2;
     }
     
     #goods ul{
+        all: unset;
         display: flex;
         position: relative;
         background-color: transparent;
         height: 400px;
-        margin-left: 108px;
+        /* margin-left: 108px; */
+        min-width: max-content;
     }
     
     #goods li{
@@ -1817,11 +1981,13 @@ footer h6{
     }
     
     #buy{
+        all: unset;
         position: absolute;
         width: 114px;
         height: 39px;
         top: 653px;
-        left: 138px;   
+        /* left: 138px; */
+        left: calc(50% - 57px);
         z-index: 2;
     }
     
@@ -1914,12 +2080,77 @@ footer h6{
         font-style: normal;
         font-weight: 400;
         line-height: 56px; /* 350% */
-        width: Fixed (251px)px;
-        height: Fixed (56px)px;
-        top: 437px;
-        left: 70px;
+        /* width: Fixed (251px)px;
+        height: Fixed (56px)px; */
+        /* top: 437px; */
+        /* left: 70px; */
+        height: 30px;
+        top: 86%;
         gap: 0px;
         opacity: 0px;        
         justify-content: center;
+    }
+
+    /* add */
+    #Project-page{
+        all: unset;
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: none;
+        width: 60vw;
+        height: 100vh;
+        background: rgba(56, 61, 69, 1);
+        overflow: hidden;
+        overflow-y: auto;
+        scrollbar-width: none; /* Firefox */
+        z-index: 1000;
+    }
+
+    #project-chose::-webkit-scrollbar {
+        display: none; /* 適用於 Chrome 和 Safari */
+    }
+
+    #Project-page1{
+        all: unset;
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    #close{
+        position: fixed;
+        top: 0;
+        left: 40%;
+        width: 40px;
+        height: 40px;
+    }
+    #project-chose{
+        all: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 300%;
+        position: absolute;
+        top: 60px;
+    }
+    #project-chose > div{
+        width: 100%;
+        height: 80%;
+    }
+    #project-chose > div > img{
+        position: unset;
+    }
+    .project-cont{
+        position: relative;
+        height: 100%;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    #history,#young,#tower,#school,#recycle,#river,#witch,#heart,#rock,#food,#Play,#mushroom,#music{
+        position: relative;
+        top: 0;
     }
 }
