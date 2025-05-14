@@ -18,23 +18,19 @@ header{
     position: absolute;
     background-color: rgba(32,32,32,0);
     width: 100%;
-    height: 80px;
-    z-index: 999;
-}
-
-nav {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    /* height: 80px; */
+    height: 10vh;
     z-index: 999;
 }
 
 #nav{
     position: relative;
-    width: 1440px;
-    height: 80px;
+    width: 100%;
+    /* height: 80px; */
+    height: 10vh;
     flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 nav button{
@@ -47,22 +43,61 @@ nav img {
     width: auto;
     height: 80px;
     position: relative;
-    margin-right: 921px;
+    margin-left: 0px;
     background-color: transparent;
 }
 
+#hmaber-button{
+    display: none;
+}
+/* 增加choose */
+.choose{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 100%;
+    width: 20%;
+}
+/* 移除top、margin，增加cursor、border-radius、transform */
 #project-chose-button{
-    top: 16px;
-    left: 1184px;
+    z-index: 99;
+    /* top: 16px; */
+    /* margin-right: 120px; */
     gap: 0px;
     opacity: 0px;
-    position: absolute;
+    position: relative;
+    cursor: pointer;
+    transform: skew(-22deg);
+    transition: transform 0.3s ease;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-#group{
-    top: 16px;
-    left: 1340px;
+/* add */
+#project-chose-button::after {
+    content: '';
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#project-chose-button.active::after{
+    background: rgba(34, 40, 49, 0.85);
+}
+#group{
+    /* margin-right: 30px; */
+    /* top: 16px; */
+    position: relative;
+    cursor: pointer;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav p {
@@ -70,13 +105,14 @@ nav p {
     text-align: center;
     text-shadow: 0px 0px 12px #23F6FF;
     font-family: "Noto Serif TC";
-    font-size: 28px;
+    font-size: clamp(18px, 2vw, 24px);/* 最小值、中間值、最大值 */
     font-style: normal;
     font-weight: 900;
     line-height: normal;
+    z-index: 100;
 }
 
-nav img:hover{
+nav a img:hover{
     width: auto;
     height: auto;
     transition: transform 0.3s ease; /* 添加過渡效果 */
@@ -91,33 +127,53 @@ nav img:hover{
     justify-content: center; 
     z-index: 3;
 }
-
+/* 修改 */
 #Project-page1{
     position: relative;
-    width: 1440px;
+    /* width: 1440px; */
+    width: 100%;
     height: 1024px;
     flex-shrink: 0;
 }
-
+/* 修改 */
 #Project-page-img{
-    width: Fixed (195px)px;
+    position: absolute;
+    right: 20%;
+    height: 80px;
+    /* width: Fixed (195px)px;
     height: Fixed (80px)px;
     left: 1127px;
     gap: 0px;
     opacity: 0px;
-    position: absolute;    
+    position: absolute;     */
 }
-
+/* 修改 */
 #project-chose{
+    /* 加flex */
+    display: flex;
     position: absolute;
-    width:1440px;
+    /* width:1440px; */
+    left: 5%;
+    width: 90%;
     height: 800px;
-    top: 80px;
+    top: 70px;
     gap: 0px;
     opacity: 0px;
     background: rgba(34, 40, 49, 0.85);
+    /* add */
+    justify-content: space-around;
 }
-
+/* add */
+#project-chose > div{
+    position: relative;
+    top: 20px;
+    display: flex;
+    width: 33%;
+    height: calc(100% - 20px);
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
 #Project-page1 h2{
     color: var(--light-blue, #96EFFF);
     text-align: center;
@@ -128,7 +184,13 @@ nav img:hover{
     line-height: normal;
     gap: 0px;
     opacity: 0px;
-    position: absolute;
+}
+/* add */
+.project-cont{
+    display: flex;
+    width: 100%;
+    height: 80%;
+    justify-content: center;
 }
 
 #h2-1{
@@ -152,20 +214,20 @@ nav img:hover{
     width: Fixed (5px)px;
     height: Fixed (102px)px;
     top: 88px;
-    left: 189px;
+    /* left: 189px; */
     position: absolute;
 }
 
 #line2{
     top: 88px;
-    left: 669px;
+    /* left: 669px; */
     gap: 0px;
     position: absolute;
 }
 
 #line3{
     top: 88px;
-    left: 1149px;
+    /* left: 1149px; */
     position: absolute;
 }
 
@@ -191,31 +253,31 @@ nav img:hover{
 
 #history{
     top:133px;
-    left: 188px;
+    /* left: 188px; */
     position: absolute;
 }
 
 #young{
     top: 276px;
-    left: 168px;
+    /* left: 168px; */
     position: absolute;
 }
 
 #tower{
     top:419px;
-    left: 148px;
+    /* left: 148px; */
     position: absolute;
 }
 
 #school{
     top: 562px;
-    left: 108px;
+    /* left: 108px; */
     position: absolute;
 }
 
 #recycle{
     top: 133px;
-    left: 620px;
+    /* left: 620px; */
     position: absolute;
 }
 
@@ -223,7 +285,7 @@ nav img:hover{
     width: Fixed (210px)px;
     height: Fixed (46px)px;
     top: 276px;
-    left: 665px;
+    /* left: 665px; */
     gap: 0px;
     opacity: 0px;
     position: absolute;    
@@ -233,7 +295,7 @@ nav img:hover{
     width: Fixed (64px)px;
     height: Fixed (48px)px;
     top: 419px;
-    left: 688px;
+    /* left: 688px; */
     gap: 0px;
     opacity: 0px;
     position: absolute;
@@ -241,37 +303,37 @@ nav img:hover{
 
 #heart{
     top: 562px;
-    left: 648px;
+    /* left: 648px; */
     position: absolute;
 }
 
 #rock{
     top:133px;
-    left:1105px;
+    /* left:1105px; */
     position: absolute;
 }
 
 #food{
     top:242px;
-    left:1145px;
+    /* left:1145px; */
     position: absolute;
 }
 
 #Play{
     top:350px;
-    left:1125px;
+    /* left:1125px; */
     position: absolute;
 }
 
 #mushroom{
     top:460px;
-    left:1185px;
+    /* left:1185px; */
     position: absolute;
 }
 
 #music{
     top: 568px;
-    left:1155px;
+    /* left:1155px; */
     position: absolute;
 }
 
@@ -279,12 +341,12 @@ nav img:hover{
     width: Fixed (28px)px;
     height: Fixed (28px)px;
     top: 16px;
-    left: 1397px;
+    right: 15px;
+    /* left: 1397px; */
     gap: 0px;
     opacity: 0px;
     position: absolute;    
 }
-
 
 #social-media-bar {
     display: none; /* 初始設置為隱藏 */
@@ -299,27 +361,36 @@ nav img:hover{
     background: #383D45; /* 背景顏色 */
     z-index: 998; /* 堆疊順序 */
 }
-
+#social-media-bar div{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
 #social-media-bar img {
     display: block; /* 讓圖片作為塊級元素 */
     background: #383D45; /* 背景顏色 */
-    padding-top: 20px; /* 頂部間距 */
-    padding-left: 30px;
+    /* padding-top: 20px; 頂部間距
+    padding-left: 30px; */
     margin: 0; /* 移除圖片的外邊距 */  
+}
+
+#hamber-button{
+    display: none;
+}
+
+#hamber{
+    display: none;
+}
+
+#hamber-project{
+    display: none;
 }
 
 #chose{
     position: relative;
     width: 100%;
-    height: 830px;
-    background-color:white;
-    display: flex;
-    justify-content: center;
-}
-
-#chose-container{
-    width: 1440px;
-    position: relative;
     height: 830px;
     background-color: white;
     display: flex;
@@ -328,60 +399,55 @@ nav img:hover{
 
 #button-left{
     position: absolute;
-    width: Fixed (120px)px;
-    height: Fixed (120px)px;
-    top: 346px;
-    left: 452px;  
+    width: 8vw;
+    top: 46vh;
+    left: 31vw;  
     z-index: 3;  
 }
 
 #button-right{
     position: absolute;
-    width: Fixed (120px)px;
-    height: Fixed (120px)px;
-    top: 346px;
-    left: 872px;
+    width: 8vw;
+    top: 46vh;
+    left: 61vw;
     z-index: 3;
 }
 
 #project1{
     position: absolute;
-    width: 320px;
-    height: 480px;
-    top: 166px;
-    left: 560px;    
+    width: 22vw;
+    height: 33vw;
+    top: 22vh;
+    left: 38.5vw;    
     z-index: 3;
-    transform-origin: top left; 
-    transition: top 0.3s ease;
+   transition: width 0.5s ease, height 0.5s ease, top 0.5s ease, left 0.5s ease, z-index 0s;
 }
 
 #project2{
     position: absolute;
-    width: 240px;
-    height: 360px;
-    top:226px;
-    left: 965px;
+    width: 17vw;
+    height: 25.5vw;
+    top: 30vh;
+    left: 69.5vw;
     z-index: 1;
-    transform-origin: top left;
-    transition: top 0.3s ease; 
+    transition: width 0.5s ease, height 0.5s ease, top 0.5s ease, left 0.5s ease, z-index 0s;
 }
 
 #project3{
     position: absolute;
     display: none;
     z-index: 1;
-    transition: top 0.3s ease;
+    transition: width 0.5s ease, height 0.5s ease, top 0.5s ease, left 0.5s ease, z-index 0s;
 }
 
 #project4{
     position: absolute;
-    width: 240px;
-    height: 360px;
-    top:226px;
-    left: 235px;
+    width: 17vw;
+    height: 25.5vw;
+    top: 30vh;
+    left: 13.5vw;
     z-index: 1; 
-    transform-origin: top left; 
-    transition: top 0.3s ease;
+    transition: width 0.5s ease, height 0.5s ease, top 0.5s ease, left 0.5s ease, z-index 0s;
 }
 
 #black{
@@ -394,56 +460,55 @@ nav img:hover{
 
 #bar-left{
     top:724px;
-    left: 449px;
-    width: Fixed (187px)px;
-    height: Fixed (50px)px;
+    left: 31vw;
+    width: 13vw;
     position: absolute;
     z-index: 2;
 }
 
 #bar-mid{
     top:724px;
-    left: 625px;
-    width: 190px;
-    height: 50px;
+    left: 43.4vw;
+    width: 13.1vw;
     position: absolute;
     z-index: 2;
 }
 
 #bar-right{
     top:724px;
-    left: 804px;
-    width: 187px;
-    height: 50px;
+    left: 55.8vw;
+    width: 13vw;
     position: absolute;
     z-index: 2;
 }
 
-#table{
-    width: auto;
-    height: auto;
-    top: 735px;
-    left: 514px;
-    position: absolute;
-    z-index: 3;
+#chose p{
+    color: #384250;
+    text-align: center;
+    font-family: "BoutiqueBitmap9x9 1.5";
+    font-size: 1.3vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    z-index: 4;
 }
 
-#PC{
-    width: auto;
-    height: auto;
-    top: 739px;
-    left: 702px;
+#p1 p{
     position: absolute;
-    z-index: 3;
+    top: 733px;
+    left: 33.6vw ;
 }
 
-#index{
-    width: auto;
-    height: auto;
-    top: 737px;
-    left: 868px;
+#p2 p{
     position: absolute;
-    z-index: 3;
+    top: 733px;
+    left: 45.7vw ;
+}
+
+#p3 p{
+    position: absolute;
+    top: 733px;
+    left: 58.2vw ;
 }
 
 #description1{
@@ -464,28 +529,20 @@ nav img:hover{
     justify-content: center; /* 水平居中 */
 }
 
-.project-1{
-    position: relative;
-    width: 1440px;
-    height: 850px;
-    flex-shrink: 0;
-}
-
 .logo-img{
     position: absolute;
-    width: 360px;
-    height: 540px;
+    width: 25vw;
+    left: 15vw;
+    top: 155px;
 }
 
 .project-1 h2{
     width: Fixed (512px)px;
     height: Fixed (92px)px;
-    top: 204px;
-    left: 713px;
-    gap: 0px;
-    opacity: 0px;
+    top: 135px;
+    left: 50vw;
     font-family: Noto Serif TC;
-    font-size: 64px;
+    font-size: clamp(32px, 4vw, 64px);
     font-weight: 700;
     line-height: 91.97px;
     text-align: left;
@@ -498,29 +555,25 @@ nav img:hover{
 .project-1 h4{
     color: #FFF;
     font-family: "Noto Serif TC";
-    font-size: 40px;
+    font-size: clamp(20px, 3vw, 40px);
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     width: Fixed (312px)px;
     height: Fixed (57px)px;
-    top: 341px;
-    left: 719px;
-    gap: 0px;
-    opacity: 0px;
+    top: 241px;
+    left: 50vw;
     position: absolute;    
 }
 
 .project-1 p{
     width: Fixed (352px)px;
     height: Fixed (57px)px;
-    top: 451px;
-    left: 719px;
-    gap: 0px;
-    opacity: 0px;
+    top: 351px;
+    left: 50vw;
     color: #FFF;
     font-family: "Noto Serif TC";
-    font-size: 40px;
+    font-size: clamp(20px, 3vw, 40px);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -538,9 +591,7 @@ nav img:hover{
     width: Fixed (55px)px;
     height: Fixed (55px)px;
     top: 584px;
-    left: 720px;
-    gap: 0px;
-    opacity: 0px;
+    left: 50vw;
     position: absolute;    
     background-color: rgba(0, 0, 0, 0);
     z-index: 3;
@@ -550,9 +601,7 @@ nav img:hover{
     width: Fixed (55px)px;
     height: Fixed (55px)px;
     top: 584px;
-    left: 815px;
-    gap: 0px;
-    opacity: 0px;
+    left: calc(50vw + 95px);
     position: absolute;
     background-color: rgba(0, 0, 0, 0);    
     z-index: 3;
@@ -564,9 +613,7 @@ nav img:hover{
     transform: rotate(15.974deg);
     flex-shrink: 0;
     top: 611px;
-    left: 1224.79px;
-    gap: 0px;
-    opacity: 0px;
+    left: 85vw;
     transform: rotate(15.974deg);
     position: absolute;
 }
@@ -575,9 +622,7 @@ nav img:hover{
     width: Fixed (123.47px)px;
     height: Fixed (120px)px;
     top: 780px;
-    left: 254.33px;
-    gap: 0px;
-    opacity: 0px;
+    left: 17.6vw;
     position: absolute;       
     z-index: 3;
 }
@@ -588,115 +633,95 @@ nav img:hover{
     height: 750px;
     background: linear-gradient(191.98deg, #222831 41.18%, #495668 81.99%);
     display: flex; /* 使用 Flexbox */
-    justify-content: center; /* 水平居中 */
-}
-
-.project-2{
-    position: relative;
-    width: 1440px;
-    height: 750px;
-    flex-shrink: 0;
-}
-
-.project-2-1{
-    position: relative;
-    width: 1440px;
-    height: 750px;
-    flex-shrink: 0;
-    background: linear-gradient(191.98deg, #222831 41.18%, #495668 81.99%);
 }
 
 .button-left-1{
-    width: Fixed (47px)px;
-    height: Fixed (90px)px;
+    width: 3.2vw;
     top: 330px;
-    left: 50px;
-    gap: 0px;
+    left: 3.5vw;
     border: 5px 0px 0px 0px;
-    opacity: 0px;
     position: absolute;
     background-color: rgba(0, 0, 0, 0);
     z-index: 3;
 }
 
 .button-right-1{
-    width: Fixed (47px)px;
-    height: Fixed (90px)px;
+    width: 3.2vw;
     top: 330px;
-    left: 1343px;
-    gap: 0px;
+    left: 93.2vw;
     border: 5px 0px 0px 0px;
-    opacity: 0px;
     position: absolute;
     background-color: rgba(0, 0, 0, 0);
     z-index: 3;
 }
 
 .info-img{
-    width: 372px;
-    height: 375px;
+    width: 20.8vw;
     top: 187px;
-    left: 179px;
-    gap: 0px;
-    opacity: 0px;
+    left: 12.4vw;
     position: absolute;    
     z-index: 3;
 }
 
-.info-p{
-    display: flex;
-    position: relative;
-}
-
-.info-p-1{
-    display: flex;
-    position: relative;
-    display: none;
-}
-
 .info-img-1{
-    width: 712px;
-    height: 506px;
-    top: 104px;
-    left: 384px;
-    gap: 0px;
-    opacity: 0px;    
     position: absolute;
+    width: 49.44vw;
+    height: 506px;   /* 保留原值 */
+    top: 104px;      /* 保留原值 */
+    left: 26.67vw;
 }
 
-.project-container-2 h2{
-    width: Fixed (320px)px;
-    height: Fixed (92px)px;
+.info-p h2{
     top: 240px;
-    left: 600px;
+    left: 41.67vw;
     position: absolute;
-    font-family: Noto Serif TC;
-    font-size: 56px;
+    font-family: 'Noto Serif TC', serif;
+    font-size: clamp(28px, 3.9vw, 56px);
     font-weight: 700;
     line-height: 80.47px;
     text-align: left;
-    text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: white;
 }
 
-.project-container-2 h4{
+.info-p h4{
     height: 35px;
 }
 
-.project-container-2 p{
-    width: Fixed (663px)px;
-    height: Fixed (115px)px;
-    left: 600px;
+.info-p p{
     position: absolute;
-    color: #FFF;
-    font-family: "Noto Serif TC";
+    left: 41.67vw;
+    color: white;
+    font-family: "Noto Serif TC", serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
     top: 348px;
-    color: white;   
+    line-height: normal;
+}
+
+.info-p-1 h3 {
+    position: absolute;
+    left: 41.67vw;
+    color: white;
+    font-family: "Noto Serif TC", serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    top: 348px;
+    line-height: normal;
+}
+
+.info-p-2 p{
+    position: absolute;
+    left: 41.67vw;
+    color: white;
+    font-family: "Noto Serif TC", serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    top: 348px;
+    line-height: normal;
 }
 
 .light-2{
@@ -717,9 +742,7 @@ nav img:hover{
     width: Fixed (125.51px)px;
     height: Fixed (125.51px)px;
     top: 553px;
-    left: 1242px;
-    gap: 0px;
-    opacity: 0px;
+    left: 86.25vw;
     position: absolute;
     z-index: 3;
 }
@@ -733,114 +756,130 @@ nav img:hover{
     justify-content: center; /* 水平居中 */
 }
 
-.project-3{
-    position: relative;
-    width: 1440px;
-    height: 750px;
-    flex-shrink: 0;
-}
-
 .description-4{
     width: Fixed (105.53px)px;
     height: Fixed (110px)px;
     top: 11px;
-    left: 42.59px;
+    left: 2.96vw;
     position: absolute;
 }
 
-.menber{
-    width: 510px;
-    height: 230px;
-    z-index: 3;
-}
-
-#menber-1{
-    top: 100px;
-    left: 170px;
+#menber-1 {
+    top: 100px;  /* 保持不變 */
+    left: 11.81vw; /* 170px / 1440px * 100 */
     position: absolute;
+    z-index: 99;
 }
 
-.menber-img{
+.menber-img {
     top: 0px;
     left: 0px;
-    width: 193.154px;
-    height: 230px;
+    width: 13.41vw; /* 193.154px / 1440px * 100 */
+    height: 230px; /* 保持不變 */
     flex-shrink: 0;
     position: absolute;
 }
 
-.menber h2{
+.menber h2 {
     color: #FFF;
     font-family: "Noto Serif TC";
-    font-size: 48px;
+    font-size: 3.33vw; /* 大約是 48px，視情況調整 */
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    width: Fixed (96px)px;
-    height: Fixed (69px)px;
-    top: 0px;
-    left: 276px;
+    width: 25.67vw; /* 96px / 1440px * 100 */
+    height: 9.67vh; /* 69px / 750px * 100 */
+    top: 0px;  /* 保持不變 */
+    left: 19.17vw; /* 276px / 1440px * 100 */
     gap: 0px;
-    opacity: 0px;    
+    opacity: 0px;
     position: absolute;
 }
 
-.menber p{
+.menber p {
     color: #FFF;
     font-family: "Noto Serif TC";
-    font-size: 36px;
+    font-size: 2.5vw; /* 大約是 36px，視情況調整 */
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    width: Fixed (154.52px)px;
-    height: Fixed (48.82px)px;
-    top: 105px;
-    left: 276px;
+    width: 25vw; /* 154.52px / 1440px * 100 */
+    height: 6.51vh; /* 48.82px / 750px * 100 */
+    top: 105px;  /* 保持不變 */
+    left: 19.17vw; /* 276px / 1440px * 100 */
     position: absolute;
 }
 
-.work-1{
-    top:178px;
-    left:276px;
-    position: absolute ;
-}
-
-.work-2{
-    top:178px;
-    left:351px;
-    position: absolute ;
-}
-
-.work-3{
-    top:178px;
-    left:426px;
-    position: absolute ;
-}
-
-.work-4{
-    top:178px;
-    left:501px;
-    position: absolute ;
-}
-
-#menber-2{
-    top:100px;
-    left: 770px;
+.work-1 {
+    top: 178px; /* 保持不變 */
+    left: 19.17vw; /* 276px / 1440px * 100 */
     position: absolute;
 }
 
-#menber-3{
-    top:420px;
-    left: 770px;
+.work-2 {
+    top: 178px; /* 保持不變 */
+    left: 24.38vw; /* 351px / 1440px * 100 */
     position: absolute;
 }
 
-#menber-4{
-    top:420px;
-    left: 170px;
+.work-3 {
+    top: 178px; /* 保持不變 */
+    left: 29.58vw; /* 426px / 1440px * 100 */
     position: absolute;
 }
 
+
+.work-4 {
+    top: 178px; /* 保持不變 */
+    left: 34.72vw; /* 501px / 1440px * 100 */
+    position: absolute;
+}
+
+.work-text{
+    position: absolute;
+    top:258px;
+    left: 19.17vw;
+    width: 20.83vw;
+    height: 36px;
+    flex-shrink: 0;
+    z-index: 99;
+    border-radius: 5px;
+    background: rgba(255, 252, 205, 0.80);
+    display: none;
+    justify-content: center;  /* 水平置中 */
+    align-items: center;  
+}
+
+.work-text h4{
+    color: #000;
+    font-family: "Noto Serif TC";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.4px;
+}
+
+#menber-2 {
+    top: 100px;  /* 保持不變 */
+    left: 53.47vw; /* 770px / 1440px * 100 */
+    position: absolute;
+    z-index: 99;
+}
+
+#menber-3 {
+    top: 420px; /* 保持不變 */
+    left: 53.47vw; /* 770px / 1440px * 100 */
+    position: absolute;
+    z-index: 99;
+}
+
+#menber-4 {
+    top: 420px; /* 保持不變 */
+    left: 11.81vw; /* 170px / 1440px * 100 */
+    position: absolute;
+    z-index: 99;
+}
 .light-4{
     left: 20px;
     bottom: 0px;
@@ -857,7 +896,7 @@ nav img:hover{
 }
 
 #project-container1{
-    display: grid;
+    display: block;
 }
 
 #project-container2{
@@ -870,26 +909,6 @@ nav img:hover{
 
 #project-container4{
     display: none;
-}
-
-#post-1{
-    top: 155px;
-    left: 215px;
-}
-
-#post-2{
-    top: 155px;
-    left: 215px;
-}
-
-#post-3{
-    top: 155px;
-    left: 215px;
-}
-
-#post-4{
-    top: 155px;
-    left: 215px;
 }
 
 footer{

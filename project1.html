@@ -13,47 +13,73 @@
         <nav>
             <div id="nav">
                 <a href="index.html"><img src="img/LOGO2.png" alt="logo"></a>
-                <ul>
-                    <li><button id="project-chose-button"><p>Project</p></button></li>
-                    <li><button id="group"><p>社群</p></button></li>
-                </ul>
+                <div class="choose"><!-- 增加class -->
+                    <div id="project-chose-button"><p>Project</p></div>
+                    <div id="group"><p>社群</p></div><!-- 修改div -->
+                </div>
+                <button id="hamber-button"><img src="img/hamburger menu button.png" alt=""></button>
             </div>
         </nav>
         <div id="social-media-bar">
             <ul>
-                <li><a href="https://www.facebook.com/NCYU.DEDM.GraduationExhibition?locale=zh_TW"><img src="img/fb.png" alt="Facebook"></a></li>
-                <li><a href="instagram.com/dedm_expo"><img src="img/ig.png" alt="Instagram"></a></li>
-                <li><a href="https://www.youtube.com/@%E4%BD%8E%E8%91%97%E9%A0%ADDIGITAL"><img src="img/yt.png" alt="YouTube"></a></li>
+                <div>
+                    <li><a href="https://www.facebook.com/NCYU.DEDM.GraduationExhibition?locale=zh_TW"><img src="img/fb.png" alt="Facebook"></a></li>
+                    <li><a href="instagram.com/dedm_expo"><img src="img/ig.png" alt="Instagram"></a></li>
+                    <li><a href="https://www.youtube.com/@%E4%BD%8E%E8%91%97%E9%A0%ADDIGITAL"><img src="img/yt.png" alt="YouTube"></a></li>
+                </div>
             </ul>
         </div>
         <div id="Project-page">
             <div id="Project-page1">
-                <img id="Project-page-img" src="img/button BG (1).png" alt="">
+                <!-- <img id="Project-page-img" src="img/button BG (1).png" alt=""> -->
                 <div id="project-chose">
-                    <h2 id="h2-1">漫遊海海知識</h2>
-                    <img id="line1" src="img/Rectangle 21.png" alt="">
-                    <button id="history"><a href="project.html"><p>寶島征程</p></a></button>
-                    <button id="young"><a href="project.html"><p>YoungBlood<br>長青體數能</p></a></button>
-                    <button id="tower"><a href="project.html"><p>遺忘之城的秘密</p></a></button>
-                    <button id="school"><a href="project.html"><p>校園迷蹤Campus Quest</p></a></button>
-                    <h2 id="h2-2">超現實探索指南</h2>
-                    <img id="line2" src="img/Rectangle 21.png" alt="">
-                    <button id="recycle"><a href="project1.html"><p>NoAh's CHAOS</p></a></button>
-                    <button id="river"><a href="project1.html"><p>貓愁溪</p></a></button>
-                    <button id="witch"><a href="project1.html"><p>劍巫</p></a></button>
-                    <button id="heart"><a href="project1.html"><p>Crossroads</p></a></button>
-                    <h2 id="h2-3">指尖 Z Power</h2>
-                    <img id="line3" src="img/Rectangle 21.png" alt="">
-                    <button id="rock"><a href="project2.html"><p>永恆之石的傳奇S</p></a></button>
-                    <button id="food"><a href="project2.html"><p>菜鳥食驗嘉</p></a></button>
-                    <button id="Play"><a href="project2.html"><p>老闆，嘉義碗</p></a></button>
-                    <button id="mushroom"><a href="project2.html"><p>菇義</p></a></button>
-                    <button id="music"><a href="project2.html"><p>潮言搖擺</p></a></button>
+                    <div>
+                        <h2 id="h2-1">漫遊海海知識</h2>
+                        <img id="line1" src="img/Rectangle 21.png" alt="">
+                        <div class="project-cont">
+                            <button id="history"><a href="project.html"><p>寶島征途</p></a></button>
+                            <button id="young"><a href="project.html"><p>YoungBlood<br>長青體數能</p></a></button>
+                            <button id="tower"><a href="project.html"><p>遺忘之城的秘密</p></a></button>
+                            <button id="school"><a href="project.html"><p>校園迷蹤Campus Quest</p></a></button>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 id="h2-2">超現實探索指南</h2>
+                        <img id="line2" src="img/Rectangle 21.png" alt="">
+                        <div class="project-cont">
+                            <button id="recycle"><a href="project1.html"><p>NoAh's CHAOS</p></a></button>
+                            <button id="river"><a href="project1.html"><p>貓愁溪</p></a></button>
+                            <button id="witch"><a href="project1.html"><p>劍巫</p></a></button>
+                            <button id="heart"><a href="project1.html"><p>Crossroads</p></a></button>
+                        </div>                        
+                    </div>                    
+                    <div>
+                        <h2 id="h2-3">指尖 Z Power</h2>
+                        <img id="line3" src="img/Rectangle 21.png" alt="">
+                        <div class="project-cont">
+                            <button id="rock"><a href="project2.html"><p>永恆之石的傳奇</p></a></button>
+                            <button id="food"><a href="project2.html"><p>菜鳥食驗嘉</p></a></button>
+                            <button id="Play"><a href="project2.html"><p>老闆，嘉義碗</p></a></button>
+                            <button id="mushroom"><a href="project2.html"><p>菇義</p></a></button>
+                            <button id="music"><a href="project2.html"><p>潮言搖擺</p></a></button>
+                        </div>                        
+                    </div>
                     <button id="close"><img src="img/close 1.png" alt=""></button>
                 </div>
             </div>
         </div>
+        <div id="hamber">
+            <ul>
+                <button id="project-chose-button1"><p>Project</p></button>
+                <div id="hamber-social">
+                    <li><a href="https://www.facebook.com/NCYU.DEDM.GraduationExhibition?locale=zh_TW"><img src="img/fb.png" alt="Facebook"></a></li>
+                    <li><a href="instagram.com/dedm_expo"><img src="img/ig.png" alt="Instagram"></a></li>
+                    <li><a href="https://www.youtube.com/@%E4%BD%8E%E8%91%97%E9%A0%ADDIGITAL"><img src="img/yt.png" alt="YouTube"></a></li>
+                </div>
+            </ul>    
+        </div>
     </header>
+
 
     <div id="chose">
         <div id="black"></div>
@@ -64,9 +90,9 @@
             <img id="project2" src="team/river/貓愁溪_網頁宣傳.png" alt="project2">
             <img id="project3" src="team/witch/SM-A4.jpg" alt="project3">
             <img id="project4" src="team/heart/crossroads500kb.png" alt="project4">
-            <button><img id="bar-left" src="img-project/Vector 23-1.png" alt=""><img id="table" src="img-project/桌遊.png"></button>
-            <button><img id="bar-mid" src="img-project/Rectangle 16.png" alt=""><img id="PC" src="img-project/PC.png"></button>
-            <button><img id="bar-right" src="img-project/Vector 23.png" alt=""><img id="index" src="img-project/網站.png"></button>
+            <a href="project.html" id="p1"><img id="bar-left" src="img-project/Vector 23-1.png" alt=""><p>漫遊海海知識</p></a>
+            <a href="project1.html" id="p2"><img id="bar-mid" src="img-project/Rectangle 16.png" alt=""><p>超現實探索指南</p></a>
+            <a href="project2.html" id="p3"><img id="bar-right" src="img-project/Vector 23.png" alt=""><p>指尖 Z Power</p></a>
             <img id="description1" src="img-project/作品1.png" alt="">
         </div>
     </div>
@@ -96,13 +122,13 @@
                 </div>
                 <div class="info-p-1">
                     <img class="info-img" src="team/nature/chaos.png" alt="">
-                    <p>
+                    <h3>
                         人物介紹—朝 Chaos<br>
                         「......無論如何，向前邁進吧。」<br>
                         <br>
                         被關在「方舟」中失去記憶的少女，為了回想起自己的過往與身處此地的原因，<br>
                         少女將逐步揭開「方舟」與世界所隱藏的秘密—
-                    </p>
+                    </h3>
                 </div>
                 <div class="info-p-2">
                     <img class="info-img" src="team/nature/noah.png" alt="">
@@ -125,11 +151,12 @@
                 <div class="menber" id="menber-1">
                     <img class="menber-img" src="team/nature/DSC0144.jpg" alt="">
                     <h2>林紀萱</h2>
-                    <p>負責工作</p>
-                    <img class="work-1" src="img-project/mail 1.png" alt="">
-                    <img class="work-2" src="img-project/text-file 1.png" alt="">
-                    <img class="work-3" src="img-project/open-folder 1.png" alt="">
-                    <img class="work-4" src="img-project/chat 2.png" alt="">
+                    <p>平面美術設計 劇情編撰</p>
+                    <button onclick="showText(this)" data-target="#work-text1" data-text="metancyu113@gmail.com" ><img class="work-1" src="img-project/mail 1.png" alt=""></button>
+                    <button onclick="showText(this)" data-target="#work-text1" data-text="影響新劇場16歲少年扮戲第十屆製作助理2024嘉大業大提案競賽第三名"><br><img class="work-2" src="img-project/text-file 1.png" alt=""></button>
+                    <button onclick="showText(this)" data-target="#work-text1" data-text="campsite.bio/ashu616_"><img class="work-3" src="img-project/open-folder 1.png" alt=""></button>
+                    <button onclick="showText(this)" data-target="#work-text1" data-text="沒有獵人卡包的美妝博主烈焰之咆哮的頭號粉絲"><img class="work-4" src="img-project/chat 2.png" alt=""></button>
+                    <div id="work-text1" class="work-text"><h4></h4></div>
                 </div>
                 <div class="menber" id="menber-2">
                     <img class="menber-img" src="team/nature/1000013037.jpg" alt="">
@@ -354,10 +381,11 @@
                     <img class="menber-img" src="team/heart/林欣霓個人照.jpg" alt="">
                     <h2>林欣霓</h2>
                     <p>負責工作</p>
-                    <img class="work-1" src="img-project/mail 1.png" alt="">
-                    <img class="work-2" src="img-project/text-file 1.png" alt="">
-                    <img class="work-3" src="img-project/open-folder 1.png" alt="">
-                    <img class="work-4" src="img-project/chat 2.png" alt="">
+                    <button onclick="showText(this)" data-text="ashelyyang068@gmail.com" data-target="#work-text1"><img class="work-1" src="img-project/mail 1.png" alt=""></button>
+                    <button onclick="showText(this)" data-target="#work-text1" data-text="影響新劇場16歲少年扮戲第十屆製作助理2024嘉大業大提案競賽第三名"><br><img class="work-2" src="img-project/text-file 1.png" alt=""></button>
+                    <button onclick="showText(this)" data-target="#work-text1" data-text="campsite.bio/ashu616_"><img class="work-3" src="img-project/open-folder 1.png" alt=""></button>
+                    <button onclick="showText(this)" data-target="#work-text1" data-text="沒有獵人卡包的美妝博主烈焰之咆哮的頭號粉絲"><img class="work-4" src="img-project/chat 2.png" alt=""></button>
+                    <div id="work-text1" class="work-text"><h4></h4></div>
                 </div>
                 <div class="menber" id="menber-2">
                     <img class="menber-img" src="team/heart/IMG_3481.JPEG" alt="">
@@ -378,7 +406,7 @@
                     <img class="work-4" src="img-project/chat 2.png" alt="">
                 </div>
                 <img class="light-4" src="img-project/Ellipse 7.png" alt="">
-                <img class="description-5" src="img-project/周邊4 (2).png" alt="">
+                <!-- <img class="description-5" src="img-project/周邊4 (2).png" alt=""> -->
             </div>
         </div>
     </div>

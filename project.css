@@ -691,7 +691,6 @@ nav a img:hover{
 .info-p p{
     position: absolute;
     left: 41.67vw;
-    top: 24.17vw;
     color: white;
     font-family: "Noto Serif TC", serif;
     font-size: 16px;
@@ -765,7 +764,7 @@ nav a img:hover{
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    width: 10.67vw; /* 96px / 1440px * 100 */
+    width: 25.67vw; /* 96px / 1440px * 100 */
     height: 9.67vh; /* 69px / 750px * 100 */
     top: 0px;  /* 保持不變 */
     left: 19.17vw; /* 276px / 1440px * 100 */
@@ -781,7 +780,7 @@ nav a img:hover{
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    width: 10.73vw; /* 154.52px / 1440px * 100 */
+    width: 25vw; /* 154.52px / 1440px * 100 */
     height: 6.51vh; /* 48.82px / 750px * 100 */
     top: 105px;  /* 保持不變 */
     left: 19.17vw; /* 276px / 1440px * 100 */
