@@ -99,7 +99,7 @@ left.addEventListener('click', () => {
         project1.style.display = 'none';
         project2.style.display = 'none';
         project3.style.display = 'none';
-        project4.style.display = 'flex';
+        project4.style.display = 'block';
         img3.style.zIndex = '1';
         img3.style.width= '17vw';
         img3.style.height= '25.5vw';
@@ -120,7 +120,7 @@ left.addEventListener('click', () => {
         num = 4;
     }
     if(num==1){
-        project1.style.display = 'flex';
+        project1.style.display = 'block';
         project2.style.display = 'none';
         project3.style.display = 'none';
         project4.style.display = 'none';
@@ -144,7 +144,7 @@ left.addEventListener('click', () => {
     }
     if(num==2){
         project1.style.display = 'none';
-        project2.style.display = 'flex';
+        project2.style.display = 'block';
         project3.style.display = 'none';
         project4.style.display = 'none';
         img1.style.zIndex = '1';
@@ -168,7 +168,7 @@ left.addEventListener('click', () => {
     if(num==3){
         project1.style.display = 'none';
         project2.style.display = 'none';
-        project3.style.display = 'flex';
+        project3.style.display = 'block';
         project4.style.display = 'none';
         img2.style.zIndex = '1';
         img2.style.width= '17vw';
@@ -196,7 +196,7 @@ right.addEventListener('click', () => {
         project1.style.display = 'none';
         project2.style.display = 'none';
         project3.style.display = 'none';
-        project4.style.display = 'flex';
+        project4.style.display = 'block';
         img3.style.zIndex = '1';
         img3.style.width= '17vw';
         img3.style.height= '25.5vw';
@@ -217,7 +217,7 @@ right.addEventListener('click', () => {
         num = 1;
     }
     if(num==2){
-        project1.style.display = 'flex';
+        project1.style.display = 'block';
         project2.style.display = 'none';
         project3.style.display = 'none';
         project4.style.display = 'none';
@@ -241,7 +241,7 @@ right.addEventListener('click', () => {
     }
     if(num==3){
         project1.style.display = 'none';
-        project2.style.display = 'flex';
+        project2.style.display = 'block';
         project3.style.display = 'none';
         project4.style.display = 'none';
         img1.style.zIndex = '1';
@@ -265,7 +265,7 @@ right.addEventListener('click', () => {
     if(num==4){
         project1.style.display = 'none';
         project2.style.display = 'none';
-        project3.style.display = 'flex';
+        project3.style.display = 'block';
         project4.style.display = 'none';
         img2.style.zIndex = '1';
         img2.style.width= '17vw';
@@ -340,6 +340,15 @@ function updateImage() {
             buttonImage.src = "img/close 1.png";
         }
     }
+
+function showText(button) {
+  const text = button.getAttribute('data-text');
+  const menberDiv = button.closest('.menber');
+  const workText = menberDiv.querySelector('.work-text h4');
+
+  workText.textContent = text;
+  menberDiv.querySelector('.work-text').style.display = 'flex';
+}
 
 window.addEventListener("load", updateSkew);
 window.addEventListener("resize", updateSkew);
