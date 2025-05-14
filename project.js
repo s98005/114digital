@@ -92,9 +92,60 @@ function updateDisplay(n) {
   }
 }
 
+function isMobile() {
+    return window.innerWidth <= 768; // 可依實際需求調整
+}
 
 left.addEventListener('click', () => {
-    num=num-1;
+    if (isMobile()) {
+        // 📱 手機版邏輯
+        // 這裡只切換 display，不動位置
+        num = num - 1;
+        if (num === 0) num = 4;
+        switch (num) {
+            case 1:
+                project1.style.display = 'block';
+                project2.style.display = 'none';
+                project3.style.display = 'none';
+                project4.style.display = 'none';
+                img1.style.display = 'flex';
+                img2.style.display = 'none';
+                img3.style.display = 'none';
+                img4.style.display = 'none';
+                break;
+            case 2:
+                project1.style.display = 'none';
+                project2.style.display = 'block';
+                project3.style.display = 'none';
+                project4.style.display = 'none';
+                img2.style.display = 'flex';
+                img1.style.display = 'none';
+                img3.style.display = 'none';
+                img4.style.display = 'none';
+                break;
+            case 3:
+                project1.style.display = 'none';
+                project2.style.display = 'none';
+                project3.style.display = 'block';
+                project4.style.display = 'none';
+                img3.style.display = 'flex';
+                img2.style.display = 'none';
+                img1.style.display = 'none';
+                img4.style.display = 'none';
+                break;
+            case 4:
+                project1.style.display = 'none';
+                project2.style.display = 'none';
+                project3.style.display = 'none';
+                project4.style.display = 'block';
+                img4.style.display = 'flex';
+                img2.style.display = 'none';
+                img3.style.display = 'none';
+                img1.style.display = 'none';
+                break;
+        }
+    } else {
+        num=num-1;
     if(num==0){
         project1.style.display = 'none';
         project2.style.display = 'none';
@@ -188,9 +239,58 @@ left.addEventListener('click', () => {
         img2.style.display = 'flex';
         img1.style.display = 'none';
     }
+    }
 });
 
 right.addEventListener('click', () => {
+    if (isMobile()) {
+        // 📱 手機版邏輯
+        num = num + 1;
+        if (num === 5) num = 1;
+        switch (num) {
+            case 1:
+                project1.style.display = 'block';
+                project2.style.display = 'none';
+                project3.style.display = 'none';
+                project4.style.display = 'none';
+                img1.style.display = 'flex';
+                img2.style.display = 'none';
+                img3.style.display = 'none';
+                img4.style.display = 'none';
+                break;
+            case 2:
+                project1.style.display = 'none';
+                project2.style.display = 'block';
+                project3.style.display = 'none';
+                project4.style.display = 'none';
+                img2.style.display = 'flex';
+                img1.style.display = 'none';
+                img3.style.display = 'none';
+                img4.style.display = 'none';
+                break;
+            case 3:
+                project1.style.display = 'none';
+                project2.style.display = 'none';
+                project3.style.display = 'block';
+                project4.style.display = 'none';
+                img3.style.display = 'flex';
+                img2.style.display = 'none';
+                img1.style.display = 'none';
+                img4.style.display = 'none';
+                break;
+            case 4:
+                project1.style.display = 'none';
+                project2.style.display = 'none';
+                project3.style.display = 'none';
+                project4.style.display = 'block';
+                img4.style.display = 'flex';
+                img2.style.display = 'none';
+                img3.style.display = 'none';
+                img1.style.display = 'none';
+                break;
+        }
+    } else {
+
     num=num+1;
     if(num==5){
         project1.style.display = 'none';
@@ -285,7 +385,9 @@ right.addEventListener('click', () => {
         img4.style.display = 'flex';
         img1.style.display = 'none';
     }
+    }
 });
+
 
 projectC.addEventListener('click', () => {
         if (project.style.display === 'none' || project.style.display === '') {

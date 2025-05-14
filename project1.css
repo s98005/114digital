@@ -799,7 +799,7 @@ nav a img:hover{
 .menber p {
     color: #FFF;
     font-family: "Noto Serif TC";
-    font-size: 2.5vw; /* 大約是 36px，視情況調整 */
+    font-size: 1.5vw; /* 大約是 36px，視情況調整 */
     font-style: normal;
     font-weight: 600;
     line-height: normal;
