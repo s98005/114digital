@@ -466,28 +466,6 @@ function showText(button) {
   menberDiv.querySelector('.work-text').style.display = 'flex';
 }
 
-function centerElements(selector) {
-  const elements = document.querySelectorAll(selector);
-  const windowWidth = window.innerWidth;
-  elements.forEach(el => {
-    const elementWidth = el.offsetWidth;
-    const left = (windowWidth - elementWidth) / 2;
-    el.style.left = `${left}px`;
-  });
-}
-
-function centerAllProjectText() {
-  centerElements('.project-1 h2');
-  centerElements('.project-1 h4');
-  centerElements('.project-1 p');
-}
-
-window.onload = () => {
-  centerAllProjectText();
-};
-
-window.addEventListener('DOMContentLoaded', centerAllProjectText);
-window.addEventListener('resize', centerAllProjectText);
 
 window.addEventListener("load", updateSkew);
 window.addEventListener("resize", updateSkew);
