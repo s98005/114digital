@@ -1152,4 +1152,69 @@ line-height: normal;
 #description1{
     display: none;
 }
+
+.logo-img{
+    position: absolute;
+    width: 51.54vw;
+    left: 24vw; /* 約等於 94px 當寬度為 390px 時 */
+    top: 116px;
+}
+
+.project-1 h2{
+    top: 455px;
+    left: 30vw;
+    font-family: Noto Serif TC;
+    font-size: clamp(32px, 4vw, 64px);
+    font-weight: 700;
+    line-height: 91.97px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    position: absolute;    
+    color: rgba(255, 255, 255, 1);
+}
+
+.project-1 h4{
+    color: #FFF;
+    font-family: "Noto Serif TC";
+    font-size: clamp(20px, 3vw, 40px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    top: 525px;
+    left: 30vw;
+    position: absolute;    
+}
+
+.project-1 p{
+    top: 600px; 
+    color: #FFF;
+    font-family: "Noto Serif TC";
+    font-size: clamp(20px, 3vw, 40px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    left: 30vw;
+}
+
+.ig{
+    display: none;
+}
+
+.yt{
+    display: none;
+}
+
+.description-1{
+    display: none;
+}
+
+.description-2{
+    display: none;
+}
+
+.project-container-1{
+    height: 784px;
+}
 }

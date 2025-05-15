@@ -97,53 +97,58 @@ function isMobile() {
 }
 
 left.addEventListener('click', () => {
-    if (isMobile()) {
-        // 📱 手機版邏輯
-        // 這裡只切換 display，不動位置
-        num = num - 1;
-        if (num === 0) num = 4;
-        switch (num) {
-            case 1:
-                project1.style.display = 'block';
-                project2.style.display = 'none';
-                project3.style.display = 'none';
-                project4.style.display = 'none';
-                img1.style.display = 'flex';
-                img2.style.display = 'none';
-                img3.style.display = 'none';
-                img4.style.display = 'none';
-                break;
-            case 2:
-                project1.style.display = 'none';
-                project2.style.display = 'block';
-                project3.style.display = 'none';
-                project4.style.display = 'none';
-                img2.style.display = 'flex';
-                img1.style.display = 'none';
-                img3.style.display = 'none';
-                img4.style.display = 'none';
-                break;
-            case 3:
-                project1.style.display = 'none';
-                project2.style.display = 'none';
-                project3.style.display = 'block';
-                project4.style.display = 'none';
-                img3.style.display = 'flex';
-                img2.style.display = 'none';
-                img1.style.display = 'none';
-                img4.style.display = 'none';
-                break;
-            case 4:
-                project1.style.display = 'none';
-                project2.style.display = 'none';
-                project3.style.display = 'none';
-                project4.style.display = 'block';
-                img4.style.display = 'flex';
-                img2.style.display = 'none';
-                img3.style.display = 'none';
-                img1.style.display = 'none';
-                break;
-        }
+      if (isMobile()) {
+    num = num - 1;
+    if (num === 0) num = 4;
+
+    // 先切換顯示狀態
+    switch (num) {
+      case 1:
+        project1.style.display = 'block';
+        project2.style.display = 'none';
+        project3.style.display = 'none';
+        project4.style.display = 'none';
+        img1.style.display = 'flex';
+        img2.style.display = 'none';
+        img3.style.display = 'none';
+        img4.style.display = 'none';
+        break;
+      case 2:
+        project1.style.display = 'none';
+        project2.style.display = 'block';
+        project3.style.display = 'none';
+        project4.style.display = 'none';
+        img2.style.display = 'flex';
+        img1.style.display = 'none';
+        img3.style.display = 'none';
+        img4.style.display = 'none';
+        break;
+      case 3:
+        project1.style.display = 'none';
+        project2.style.display = 'none';
+        project3.style.display = 'block';
+        project4.style.display = 'none';
+        img3.style.display = 'flex';
+        img2.style.display = 'none';
+        img1.style.display = 'none';
+        img4.style.display = 'none';
+        break;
+      case 4:
+        project1.style.display = 'none';
+        project2.style.display = 'none';
+        project3.style.display = 'none';
+        project4.style.display = 'block';
+        img4.style.display = 'flex';
+        img2.style.display = 'none';
+        img3.style.display = 'none';
+        img1.style.display = 'none';
+        break;
+    }
+
+    // 用 requestAnimationFrame 等畫面更新後再計算位置
+    requestAnimationFrame(() => {
+    centerAllProjectText();
+});
     } else {
         num=num-1;
     if(num==0){
@@ -242,6 +247,10 @@ left.addEventListener('click', () => {
     }
 });
 
+window.addEventListener('resize', () => {
+  centerAllProjectText();
+});
+
 right.addEventListener('click', () => {
     if (isMobile()) {
         // 📱 手機版邏輯
@@ -289,6 +298,11 @@ right.addEventListener('click', () => {
                 img1.style.display = 'none';
                 break;
         }
+    setTimeout(() => {
+  requestAnimationFrame(() => {
+    centerAllProjectText();
+  });
+}, 0.5);
     } else {
 
     num=num+1;
@@ -451,6 +465,29 @@ function showText(button) {
   workText.textContent = text;
   menberDiv.querySelector('.work-text').style.display = 'flex';
 }
+
+function centerElements(selector) {
+  const elements = document.querySelectorAll(selector);
+  const windowWidth = window.innerWidth;
+  elements.forEach(el => {
+    const elementWidth = el.offsetWidth;
+    const left = (windowWidth - elementWidth) / 2;
+    el.style.left = `${left}px`;
+  });
+}
+
+function centerAllProjectText() {
+  centerElements('.project-1 h2');
+  centerElements('.project-1 h4');
+  centerElements('.project-1 p');
+}
+
+window.onload = () => {
+  centerAllProjectText();
+};
+
+window.addEventListener('DOMContentLoaded', centerAllProjectText);
+window.addEventListener('resize', centerAllProjectText);
 
 window.addEventListener("load", updateSkew);
 window.addEventListener("resize", updateSkew);
